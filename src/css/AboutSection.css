@@ -1,0 +1,17 @@
+#about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .about-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  
+  .body-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  

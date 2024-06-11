@@ -1,0 +1,25 @@
+#footer {
+    width: 100%;
+    display: flex;
+    padding: 30px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  a.icon-link {
+    transition: transform 200ms ease-in-out;
+  }
+  
+  a.icon-link:hover {
+    cursor: pointer;
+    stroke-width: 5;
+    margin: 0;
+    transform: rotate(15deg);
+  }
+  

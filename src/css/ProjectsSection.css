@@ -1,0 +1,53 @@
+#my-work-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .projects-container {
+    display: flex;
+    gap: 34px 16px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    max-width: calc((100% - 32px) / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  
+  .project-card-text-container {
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .subheader-text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .project-card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .project-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
