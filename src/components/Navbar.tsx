@@ -10,9 +10,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-     {/*  <a className="nav-title-link" href="#home">
-        <span className="nav-title">GP Portfolio</span>
-      </a> */}
+    
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="#home" onClick={toggleMenu}>Home</a>
         <a href="#projects" onClick={toggleMenu}>Projects</a>
