@@ -12,10 +12,10 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
     
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <a href="#home" onClick={toggleMenu}>Home</a>
-        <a href="#projects" onClick={toggleMenu}>Projects</a>
-        <a href="#about" onClick={toggleMenu}>Background</a>
-        <a href="#contact" onClick={toggleMenu}>Contact</a>
+        <a href="http://localhost:5173/" onClick={toggleMenu}>Home</a>
+        <a href="http://localhost:5173#my-work-section" onClick={toggleMenu}>Projects</a>
+        <a href="http://localhost:5173#about-section" onClick={toggleMenu}>Background</a>
+        <a href="http://localhost:5173#contact" onClick={toggleMenu}>Contact</a>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="bar"></span>

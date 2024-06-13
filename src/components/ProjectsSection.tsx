@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/ProjectsSection.css';
 
 import arrowRightIcon from '../assets/icons/arrow-right.svg';
@@ -45,10 +46,10 @@ const ProjectsSection: React.FC = () => (
             <div className="subheader-text project-title">{project.title}</div>
             <div className="body-text project-card-text">{project.description}</div>
           </div>
-          <a className="button" href={project.link}>
+          <Link className="button" to={`/project/${encodeURIComponent(project.title)}`}>
             <span className="button-text">Read More</span>
             <img src={arrowRightIcon} alt="Arrow Right" className="right-arrow-icon" />
-          </a>
+          </Link>
         </div>
       ))}
     </div>
