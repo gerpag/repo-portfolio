@@ -12,9 +12,24 @@ function ContactForm() {
   return (
     
     <form onSubmit={handleSubmit}>
-      <div>
+      <div id='contact'>
       <span className="subheader-text">Contact me</span>
       </div>
+
+      <label htmlFor="name">
+        Name
+      </label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+      />
+      <ValidationError 
+        prefix="Name" 
+        field="name"
+        errors={state.errors}
+      />
+
       <label htmlFor="email">
         Email Address
       </label>

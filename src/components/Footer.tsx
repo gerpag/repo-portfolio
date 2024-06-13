@@ -1,17 +1,14 @@
 import React from 'react';
 import '../css/Footer.css';
+import { FaGithub, FaFileAlt, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer: React.FC = () => (
   <div id="footer">
-    <a className="icon-link" target="_blank" href="https://twitter.com/whitevans_eth" rel="noopener noreferrer">
-      <img src="./assets/icons/instagram.svg" alt="Instagram" className="footer-icon" />
-    </a>
-    <a className="icon-link" target="_blank" href="https://twitter.com/whitevans_eth" rel="noopener noreferrer">
-      <img src="./assets/icons/twitter.svg" alt="Twitter" className="footer-icon" />
-    </a>
-    <a className="icon-link" href="#">
-      <img src="./assets/icons/mail.svg" alt="Email" className="footer-icon" />
-    </a>
+    <a href="https://github.com/gerpag" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
+          
+          <a href="#" download className="icon-link"><FaFileAlt /></a>
+          <a href="mailto:germinalfp@gmail.com" className="icon-link"><FaEnvelope /></a>
+          <a href="https://www.linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
   </div>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ProjectDetails from '..components/ProjectDetails';
+import ProjectDetails from '../commons/ProjectDetails';
 import projects from '../data/projects';
 
 const ProjectDetailsPage: React.FC = () => {
