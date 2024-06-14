@@ -37,19 +37,21 @@ const projects: Project[] = [
 
 const ProjectsSection: React.FC = () => (
   <div id="my-work-section">
-    <span className="subheader-text">My Projects</span>
+    <h2 className="section-title">My Projects</h2>
     <div className="projects-container">
       {projects.map((project, index) => (
         <div key={index} className="project-card">
           <img src={project.image} alt={project.title} className="project-image" />
           <div className="project-card-text-container">
-            <div className="subheader-text project-title">{project.title}</div>
-            <div className="body-text project-card-text">{project.description}</div>
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-card-text">{project.description}</p>
           </div>
-          <Link className="button" to={`/project/${encodeURIComponent(project.title)}`}>
-            <span className="button-text">Read More</span>
-            <img src={arrowRightIcon} alt="Arrow Right" className="right-arrow-icon" />
-          </Link>
+          <div className="project-card-footer">
+            <Link className="button" to={`/project/${encodeURIComponent(project.title)}`}>
+              <span className="button-text">Read More</span>
+              <img src={arrowRightIcon} alt="Arrow Right" className="right-arrow-icon" />
+            </Link>
+          </div>
         </div>
       ))}
     </div>
@@ -57,3 +59,7 @@ const ProjectsSection: React.FC = () => (
 );
 
 export default ProjectsSection;
+
+
+
+

@@ -25,10 +25,7 @@ const PortfolioHeader: React.FC = () => (
         <a href="mailto:germinalfp@gmail.com" className="icon-link"><FaEnvelope /></a>
         <a href="https://www.linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
       </div>
-      <a className="button" href="#my-work-section">
-        <span className="button-text">Check out my background</span>
-        <img src="./assets/icons/arrow-right.svg" alt="Arrow Right" className="right-arrow-icon" />
-      </a>
+      
     </div>
   </div>
 );

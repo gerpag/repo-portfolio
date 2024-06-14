@@ -10,12 +10,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-    
+      <a href="/" className="nav-title-link">Portfolio</a>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <a href="http://localhost:5173/" onClick={toggleMenu}>Home</a>
-        <a href="http://localhost:5173#my-work-section" onClick={toggleMenu}>Projects</a>
-        <a href="http://localhost:5173#about-section" onClick={toggleMenu}>Background</a>
-        <a href="http://localhost:5173#contact" onClick={toggleMenu}>Contact</a>
+        <a href="#my-work-section" onClick={toggleMenu}>Projects</a>
+        <a href="#about-section" onClick={toggleMenu}>Background</a>
+        <a href="#contact" onClick={toggleMenu}>Contact</a>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="bar"></span>
