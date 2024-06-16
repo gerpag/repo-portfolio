@@ -1,157 +1,98 @@
 import React from 'react';
-import { FaReact, FaCss3Alt, FaNodeJs, FaDatabase, FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello } from 'react-icons/fa'; // Importar los íconos de FontAwesome
-import { SiKubernetes } from 'react-icons/si';
+import {
+  FaReact, FaCss3Alt, FaNodeJs, FaDatabase, FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello
+} from 'react-icons/fa';
+import { SiKubernetes, SiExpress, SiJsonwebtokens } from 'react-icons/si';
 import '../css/AboutSection.css';
 
 const AboutSection: React.FC = () => (
   <div id="about-section">
     <h2 className="section-title">My Background</h2>
-    <p className="section-description">Below are my technical skills, agile/scrum methodologies, and certificates.</p>
-    <div className="section">
-      <span className="subsection-title">Technical Skills</span>
-      <div className="skills-list">
-        <div className="skill">
-          <FaReact alt="React" />
-          <span className="skill-label">React</span>
+    <p className="section-description">
+      Below is a summary of my technical skills, methodologies, and certifications.
+    </p>
+    <div className="about-section-content">
+      <div className="skills-section">
+        <span className="subsection-title">Technical Skills</span>
+        <div className="skill-category">
+          <span className="subsection-title">Frontend</span>
+          <div className="skills-list">
+            <div className="skill">
+              <FaReact  />
+            </div>
+            <div className="skill">
+              <FaCss3Alt  />
+            </div>
+          </div>
         </div>
-        <div className="skill">
-          <FaCss3Alt alt="CSS" />
-          <span className="skill-label">CSS</span>
+        <div className="skill-category">
+          <span className="subsection-title">Backend</span>
+          <div className="skills-list">
+            <div className="skill">
+              <FaNodeJs />
+            </div>
+            <div className="skill">
+              <SiExpress  />
+            </div>
+            <div className="skill">
+              <FaDatabase  />
+            </div>
+            <div className="skill">
+              <SiJsonwebtokens />
+            </div>
+          </div>
         </div>
-        {/* Agregar más íconos y habilidades de Frontend según sea necesario */}
+        <div className="skill-category">
+          <span className="subsection-title">DevOps</span>
+          <div className="skills-list">
+            <div className="skill">
+              <FaDocker  />
+            </div>
+            <div className="skill">
+              <FaJenkins />
+            </div>
+            <div className="skill">
+              <SiKubernetes />
+            </div>
+            <div className="skill">
+              <FaGithub  />
+            </div>
+            <div className="skill">
+              <FaGitAlt />
+            </div>
+          </div>
+        </div>
+        <div className="skill-category">
+          <span className="subsection-title">Agile/Scrum Methodologies</span>
+          <div className="skills-list">
+            <div className="skill">
+              <FaGithub  />
+            </div>
+            <div className="skill">
+              <FaGitAlt  />
+            </div>
+            <div className="skill">
+              <FaTrello />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="section">
-      <span className="subsection-title">Backend</span>
-      <div className="skills-list">
-        <div className="skill">
-          <FaNodeJs alt="Node.js" />
-          <span className="skill-label">Node.js</span>
-        </div>
-        <div className="skill">
-          <FaDatabase alt="Databases" />
-          <span className="skill-label">Databases</span>
-        </div>
-        {/* Agregar más íconos y habilidades de Backend según sea necesario */}
+
+      <div className="section">
+        <span className="subsection-title">Certificates</span>
+        <ul className="certificates-list">
+          <li className="certificate-item">Plataforma 5: <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">JavaScript Coding Bootcamp (2023)</a>, Full Stack Developer</li>
+          <li className="certificate-item">Udemy: DevOps with Docker, Jenkins, Kubernetes, git, GitFlow CI & CD
+          </li>
+          <li className="certificate-item">Computer cybersecurity in the company (2024)</li>
+        </ul>
       </div>
-    </div>
-    <div className="section">
-      <span className="subsection-title">DevOps</span>
-      <div className="skills-list">
-        <div className="skill">
-          <FaDocker alt="Docker" />
-          <span className="skill-label">Docker</span>
-        </div>
-        <div className="skill">
-          <FaJenkins alt="Jenkins" />
-          <span className="skill-label">Jenkins</span>
-        </div>
-        <div className="skill">
-          <SiKubernetes alt="Kubernetes" />
-          <span className="skill-label">Kubernetes</span>
-        </div>
-        <div className="skill">
-          <FaGithub alt="GitHub" />
-          <span className="skill-label">GitHub</span>
-        </div>
-        <div className="skill">
-          <FaGitAlt alt="Git" />
-          <span className="skill-label">Git</span>
-        </div>
-        <div className="skill">
-          <FaTrello alt="Trello" />
-          <span className="skill-label">Trello</span>
-        </div>
-        {/* Agregar más íconos y habilidades de DevOps según sea necesario */}
-      </div>
-    </div>
-    <div className="section">
-      <span className="subsection-title">Agile/Scrum Methodologies</span>
-      <div className="body-text">
-        {/* Agregar texto o detalles sobre Agile/Scrum Methodologies */}
-      </div>
-    </div>
-    <div className="section">
-      <span className="subsection-title">Certificates</span>
-      <ul className="certificates-list">
-        <li className="certificate-item">Certificate 1</li>
-        <li className="certificate-item">Certificate 2</li>
-        <li className="certificate-item">Certificate 3</li>
-        {/* Agregar más certificados según sea necesario */}
-      </ul>
+      
     </div>
   </div>
 );
 
 export default AboutSection;
-
-
-
-
-
-
-
-
-
-
-
-
-/* import React from 'react';
-import { FaReact, FaCss3Alt, FaNodeJs, FaDatabase, FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello } from 'react-icons/fa'; // Importar los íconos de FontAwesome
-import { SiKubernetes } from 'react-icons/si';
-import '../css/AboutSection.css';
-
-const AboutSection: React.FC = () => (
-  <div id="about-section">
-    <span className="section-title">My Background</span>
-    <div className="section">
-      <span className="subsection-title">Technical Skills</span>
-      <div className="skills-list">
-        <div className="skill frontend">
-          <FaReact />
-        </div>
-        <div className="skill frontend">
-          <FaCss3Alt />
-        </div>
-        <div className="skill backend">
-          <FaNodeJs />
-        </div>
-        <div className="skill backend">
-          <FaDatabase />
-        </div>
-        <div className="skill devops">
-          <FaDocker />
-        </div>
-        <div className="skill devops">
-          <FaJenkins />
-        </div>
-        <div className="skill devops">
-          <SiKubernetes />
-        </div>
-        <div className="skill devops">
-          <FaGithub />
-        </div>
-        <div className="skill devops">
-          <FaGitAlt />
-        </div>
-        <div className="skill devops">
-          <FaTrello />
-        </div>
-      </div>
-    </div>
-    <div className="section">
-      <span className="subsection-title">Agile/Scrum Methodologies</span>
-      <div className="body-text">
-        {/* Agregar texto o detalles sobre Agile/Scrum Methodologies 
-     
-
-export default AboutSection;
- */
-
-
-
-
-
 
 
 

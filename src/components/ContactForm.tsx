@@ -7,7 +7,7 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xgeggaky");
   
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>Thanks contacting me!</p>;
   }
   return (
     
@@ -27,6 +27,20 @@ function ContactForm() {
       <ValidationError 
         prefix="Name" 
         field="name"
+        errors={state.errors}
+      />
+
+<label htmlFor="subject">
+        Subject
+      </label>
+      <input
+        id="subject"
+        type="text"
+        name="subject"
+      />
+      <ValidationError 
+        prefix="subject" 
+        field="subject"
         errors={state.errors}
       />
 
