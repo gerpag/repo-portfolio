@@ -14,7 +14,7 @@ const PortfolioHeader: React.FC = () => (
         <div className="body-text">I’m a full stack developer.</div>
       </div>
       <div className="body-text">
-        I'm interested in the intersection of technology and philosophy. I have recently trained as a fullstack developer (<a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">P5</a>).
+        I'm interested in the intersection of technology and philosophy. I have recently trained as a fullstack developer. <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer"></a> <br />
         My goal is to continue learning and bridging these fields that I am passionate about.
       </div>
       
