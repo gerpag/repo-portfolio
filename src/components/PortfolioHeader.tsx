@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/PortfolioHeader.css';
 import perfilImage from '../assets/images/perfil.jpg';
-import { FaGithub, FaFileAlt, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaFileAlt, FaLinkedin, FaEnvelope, FaDiscord } from 'react-icons/fa';
 
 const PortfolioHeader: React.FC = () => (
   <div id="portfolio-header">
@@ -14,7 +14,7 @@ const PortfolioHeader: React.FC = () => (
         <div className="body-text">I’m a full stack developer.</div>
       </div>
       <div className="body-text">
-        I'm interested in the intersection of technology and philosophy. I have recently trained as a fullstack developer. <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer"></a> <br />
+        I'm interested in the intersection of technology and philosophy. <br></br> I have recently trained as a fullstack developer. <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer"></a> <br />
         My goal is to continue learning and bridging these fields that I am passionate about.
       </div>
       
@@ -24,6 +24,7 @@ const PortfolioHeader: React.FC = () => (
         <a href="/ruta-a-cv.pdf" download className="icon-link"><FaFileAlt /></a>
         <a href="mailto:germinalfp@gmail.com" className="icon-link"><FaEnvelope /></a>
         <a href="https://www.linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
+        <a href="https://discordapp.com/users/724728588519342100" target="_blank" rel="noopener noreferrer" className="icon-link"><FaDiscord /></a>
       </div>
       
     </div>
