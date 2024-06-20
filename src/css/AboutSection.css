@@ -1,80 +1,89 @@
+:root {
+  --primary-color: #333;
+  --primary-hover-color: #bec8d3;
+  --background-color: #f9f9f9;
+  --text-color: #666;
+  --text-dark-color: #333;
+  --text-light-color: #ffffff;
+}
 
 #about-section {
-  padding: 40px;
+  padding: 2.5rem; /* Relative padding */
   text-align: center;
 }
 
 .section-title {
-  font-size: 50px;
+  font-size: 3.125rem; /* 50px / 16 = 3.125rem */
   font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.section-description {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 0.625rem; /* 10px / 16 = 0.625rem */
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; 
+  gap: 1.875rem; /* 30px / 16 = 1.875rem */
 }
 
 .skills-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem; /* 20px / 16 = 1.25rem */
   width: 100%;
 }
 
 .skill-category {
   display: block;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
 }
 
-.subsection-title {
-  font-size: 24px;
-  font-weight: 200;
-  flex-basis: 100%;
-  text-align: center; 
-}
- .subsection-title1 {
-  font-size: 24px;
+.subsection-title1 {
+  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
   font-weight: 700;
-  flex-basis: 100%;
-  text-align: center; 
+  text-align: center;
   margin-bottom: 5%;
-} 
+}
+
+.subsection-title {
+  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+  font-weight: 200;
+  text-align: center;
+}
 
 .skills-list {
   display: flex;
-  gap: 5%;
-  margin: 5%;
+  gap: 2%; /* Relative spacing */
+  margin: 2%; /* Relative margin */
   flex-wrap: wrap;
-  justify-content: center; 
-  flex-basis: 100%;
-
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2.5rem; /* Relative bottom margin */
 }
 
 .skill {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: 3em;
-  color: #333;
-  transition: color 0.3s, transform 0.3s; 
-  
+  font-size: 3rem; /* Relative font size */
+  color: var(--primary-color);
+  transition: color 0.3s, transform 0.3s;
 }
 
 .skill:hover {
-  color: #bec8d3;
-  transform:  rotate(10deg) ; 
+  color: var(--primary-hover-color);
+  transform: rotate(10deg);
+}
+
+.skill-label {
+  margin-top: 0.3125rem; /* 5px / 16 = 0.3125rem */
+  font-size: 1rem;
+  color: var(--primary-color);
+  text-align: center; /* Asegura que el texto esté centrado */
+  width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
 }
 
 .certificates-list {
@@ -84,10 +93,9 @@
 }
 
 .certificate-item {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
+  margin-bottom: 0.625rem; /* 10px / 16 = 0.625rem */
 }
-
 
 @media (max-width: 768px) {
   .skill-category {
@@ -99,9 +107,6 @@
     justify-content: center;
   }
 }
-
-
-
 
 
 
