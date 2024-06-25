@@ -95,7 +95,7 @@ const AboutSection: React.FC = () => (
       <div className="section">
         <span className="subsection-title1">Certifications</span>
         <ul className="certificates-list">
-          <li className="certificate-item">Plataforma 5: <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">JavaScript Coding Bootcamp (2023)</a>, Full Stack Developer</li>
+          <li className="certificate-item">P5: <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">JavaScript Coding Bootcamp (2023)</a>, Full Stack Developer</li>
           <li className="certificate-item">Udemy: DevOps with Docker, Jenkins, Kubernetes, git, GitFlow and CI/CD</li>
           <li className="certificate-item">Computer cybersecurity in the company (2024)</li>
         </ul>

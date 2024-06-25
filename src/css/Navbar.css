@@ -21,6 +21,10 @@
   top: 0;
   left: 0;
   z-index: 10;
+  transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
   box-shadow: 0 .5px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -33,12 +37,11 @@
   color: var(--primary-color);
   text-decoration: none;
   font-size: 1.3rem;
-  
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
-  font-weight: 700
+  font-weight: 700;
 }
 
 .hamburger {
@@ -66,7 +69,6 @@
     gap: 10px;
     width: 40%;
     padding: 20px;
-    display: none;
     box-shadow: 0 .5px 2px rgba(0, 0, 0, 0.1);
   }
 
@@ -88,7 +90,8 @@
 .nav-title-link:hover {
   color: var(--primary-color);
   font-weight: 1000;
-  
 }
+
+
 
 

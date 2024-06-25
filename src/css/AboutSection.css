@@ -8,28 +8,28 @@
 }
 
 #about-section {
-  padding: 2.5rem; /* Relative padding */
+  padding: 2.5rem; 
   text-align: center;
 }
 
 .section-title {
-  font-size: 3.125rem; /* 50px / 16 = 3.125rem */
+  font-size: 3.125rem; 
   font-weight: 700;
-  margin-bottom: 0.625rem; /* 10px / 16 = 0.625rem */
+  margin-bottom: 0.625rem; 
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.875rem; /* 30px / 16 = 1.875rem */
+  gap: 1.875rem; 
 }
 
 .skills-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem; /* 20px / 16 = 1.25rem */
+  gap: 1.25rem;
   width: 100%;
 }
 
@@ -42,33 +42,33 @@
 }
 
 .subsection-title1 {
-  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+  font-size: 1.5rem; 
   font-weight: 700;
   text-align: center;
   margin-bottom: 5%;
 }
 
 .subsection-title {
-  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+  font-size: 1.5rem; 
   font-weight: 200;
   text-align: center;
 }
 
 .skills-list {
   display: flex;
-  gap: 2%; /* Relative spacing */
-  margin: 2%; /* Relative margin */
+  gap: 2%; 
+  margin: 2%; 
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-bottom: 2.5rem; /* Relative bottom margin */
+  margin-bottom: 2.5rem; 
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 3rem; /* Relative font size */
+  font-size: 3rem; 
   color: var(--primary-color);
   transition: color 0.3s, transform 0.3s;
 }
@@ -79,12 +79,11 @@
 }
 
 .skill-label {
-  margin-top: 0.3125rem; /* 5px / 16 = 0.3125rem */
+  margin-top: 0.3125rem; 
   font-size: 1rem;
   color: var(--primary-color);
-  text-align: center; /* Asegura que el texto esté centrado */
-  width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
-}
+  text-align: center; 
+  width: 100%; 
 
 .certificates-list {
   list-style-type: none;
@@ -93,8 +92,8 @@
 }
 
 .certificate-item {
-  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
-  margin-bottom: 0.625rem; /* 10px / 16 = 0.625rem */
+  font-size: 1.125rem; 
+  margin-bottom: 0.625rem; 
 }
 
 @media (max-width: 768px) {
