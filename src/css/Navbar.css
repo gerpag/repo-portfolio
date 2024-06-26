@@ -42,6 +42,7 @@
 .nav-links a:hover {
   color: var(--primary-color);
   font-weight: 700;
+  
 }
 
 .hamburger {
