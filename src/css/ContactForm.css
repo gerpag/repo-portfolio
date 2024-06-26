@@ -2,6 +2,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px; 
+  width: 80%;
+  margin: auto;
 }
 
 #contact{
@@ -64,4 +66,15 @@ a.icon-link:hover {
   stroke-width: 5;
   margin: 0;
   transform: rotate(15deg);
+}
+
+
+
+@media (max-width: 768px){
+  form {
+   
+    width: 100%;
+   
+  }
+  
 }
