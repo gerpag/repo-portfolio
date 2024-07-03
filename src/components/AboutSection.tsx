@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  FaReact, FaCss3Alt, FaNodeJs,FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello, FaAws
+  FaReact, FaCss3Alt, FaNodeJs,FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello, FaAws, FaFileAlt
 } from 'react-icons/fa';
-import { SiKubernetes, SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb, SiTailwindcss } from 'react-icons/si'; // Agrega los nuevos íconos aquí
+import { SiKubernetes, SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb } from 'react-icons/si'; 
 import '../css/AboutSection.css';
 
 const AboutSection: React.FC = () => (
@@ -17,10 +17,7 @@ const AboutSection: React.FC = () => (
               <FaReact />
               <span className="skill-label">React</span>
             </div>
-          {/*   <div className="skill">
-              <SiTailwindcss />
-              <span className="skill-label">TailwindCSS</span>
-            </div> */}
+        
             <div className="skill">
               <FaCss3Alt />
               <span className="skill-label">CSS3</span>
@@ -46,8 +43,6 @@ const AboutSection: React.FC = () => (
               <span className="skill-label">JWT</span>
             </div>
           </div>
-
-          
         </div>
         
         <div className="skill-category">
@@ -89,10 +84,12 @@ const AboutSection: React.FC = () => (
       <div className="section">
         <span className="subsection-title1">Education</span>
         <ul className="certificates-list">
-          <li className="certificate-item">P5: <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">JavaScript Coding Bootcamp (2023)</a>, Full Stack Developer</li>
-          <li className="certificate-item">Udemy: DevOps with Docker, Jenkins, Kubernetes, git, GitFlow and CI/CD</li>
-          <li className="certificate-item">Computer cybersecurity in the company (2024)</li>
+          <li className="certificate-item">JavaScript Coding Bootcamp, Full Stack Developer <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">(P5)</a> </li>
+          <li className="certificate-item">DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD (Udemy)</li>
+          <li className="certificate-item">Computer cybersecurity in the company (Campus fp)</li>
+         
         </ul>
+            <a  href="/ruta-a-cv.pdf" download id='cv' className="icon-link skill"><FaFileAlt /> <span className="skill-label">CV</span></a>
       </div>
     </div>
   </div>
