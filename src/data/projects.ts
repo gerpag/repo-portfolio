@@ -4,6 +4,9 @@ import polirubroImage from '../assets/images/polirubro.png';
 /*import fastDeliveryVideo from '../assets/videos/fast-delivery.webm';
 import houseOfDevVideo from '../assets/videos/house-of-dev.webm'; */
 import polirubroVideo from '../assets/videos/polirubro.webm';
+import polirubroGal1 from "../assets/images/polirubro-gal/BOLSA-PLÁSTICO-ESTAMPADA IKEA-AZUL-NO-NO.jpg"
+import polirubroGal2 from "../assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTICO-RAYAS-BLANCO.NARANJA-NO-NO.jpg"
+
 
 const projects = [
   {
@@ -32,8 +35,8 @@ const projects = [
       'It allows for streamlined...'
     ],
     galleryImages: [
-      { src: '../assets/images/polirubro1.png', caption: 'Store layout 1', isHalfWidth: true },
-      { src: '../assets/images/polirubro2.png', caption: 'Store layout 2', isHalfWidth: false }
+      { src: polirubroGal1, caption: 'Store layout 1', isHalfWidth: true },
+      { src: polirubroGal2, caption: 'Store layout 2', isHalfWidth: false }
     ],
     technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
     repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' }

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
+import '../css/ProjectDetails.css';
 
 interface ProjectDetailsProps {
   name: string;
@@ -21,16 +23,29 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   technologies = [],
   repository = { front: '', back: '' }
 }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleImageClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div>
+    <div className="project-details">
       <h1>{name}</h1>
-      <img src={image} alt={name} className="project-header-image" />
-      {demoVideo && (
-        <video width="100%" controls>
-          <source src={demoVideo} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      <div className="project-header-image-container" onClick={handleImageClick}>
+        <img
+          src={image}
+          alt={name}
+          className="project-header-image"
+        />
+        <span className="project-demo-text">Demo</span>
+      </div>
+      
+     
       <p className="body-text">{description}</p>
       
       <h2>Details</h2>
@@ -74,6 +89,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           </div>
         ))}
       </div>
+
+      
+      <Modal show={showModal} videoUrl={demoVideo} onClose={handleCloseModal} />
     </div>
   );
 };
