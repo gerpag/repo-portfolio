@@ -16,7 +16,7 @@ const Modal: React.FC<ModalProps> = ({ show, videoUrl, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>X</button>
+        <button className="close-button" onClick={onClose}>x</button>
         <div className="video-wrapper">
           <iframe
             src={videoUrl}
