@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectDetails from '../commons/ProjectDetails';
 import "../css/ProjectDetailsPage.css";
@@ -11,6 +11,10 @@ const ProjectDetailsPage: React.FC = () => {
   const project = projects.find(p => 
     p.title.toLowerCase().replace(/\s+/g, '-') === title?.toLowerCase()
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return <div>Project not found</div>;
