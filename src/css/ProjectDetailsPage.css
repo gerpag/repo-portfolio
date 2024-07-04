@@ -1,4 +1,233 @@
+/* Contenedor de la página de detalles del proyecto */
 .project-details-page-container {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+/* Contenedor principal de los detalles */
+.project-details-wrapper {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la página */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Descripción de la página */
+.page-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Galería de la página */
+.page-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.page-gallery img {
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page-gallery .half-width {
+  flex: 1 1 48%;
+}
+
+.page-gallery .full-width {
+  flex: 1 1 100%;
+}
+
+.project-details-wrapper video {
+  width: 40%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+
+  .page-gallery .half-width {
+    flex: 1 1 100%;
+  }
+}
+
+/* Contenedor de detalles del proyecto */
+.project-details-page {
+  padding: 20px;
+}
+
+/* Título de los detalles del proyecto */
+.project-details-tittle {
+  font-size: 2.5rem; /* Ajusta el tamaño según tu preferencia */
+  text-align: center;
+  line-height: 1;
+  margin-top: 0; /* Reducir o eliminar el margen superior */
+  margin-bottom: 20px; /* Ajusta este margen según el espacio que desees */
+}
+
+/* Texto del cuerpo */
+.body-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de la imagen principal del proyecto */
+.project-header-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Máxima anchura para imágenes en pantallas grandes */
+  height: 0;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  margin-top: 10%;
+  margin-bottom: 10%;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro para imágenes no cargadas */
+}
+
+/* Estilo de la imagen principal */
+.project-header-image {
+  position: absolute;
+  top: -2;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se recorta para llenar el contenedor */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+/* Efecto de hover sobre la imagen principal */
+.project-header-image-container:hover .project-header-image {
+  transform: scale(1.05); /* Suaviza la animación al pasar el mouse */
+}
+
+/* Texto de demostración superpuesto */
+.project-demo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--text-light-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 1.5rem;
+}
+
+/* Efecto de hover sobre el texto de demostración */
+.project-header-image-container:hover .project-demo-text {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Texto de subencabezado */
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la lista de detalles */
+.project-details-content .body-text {
+  margin-bottom: 10px;
+}
+
+/* Estilo para la galería de imágenes */
+#project-gallery {
+  margin-top: 30px;
+}
+
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Contenedor de la galería de imágenes */
+.gallery-image-container {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-image-container.half-width {
+  flex: 1 1 48%;
+}
+
+/* Estilo de la galería de imágenes */
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para la leyenda de la imagen */
+.image-caption {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  .project-header-image-container {
+    max-width: 90%; /* Reducción de tamaño en pantallas más pequeñas */
+  }
+  .project-details-tittle {
+    font-size: 2rem; /* Ajuste de tamaño de fuente */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-header-image-container {
+    max-width: 100%; /* Ajusta al 100% del contenedor */
+    padding-bottom: 75%; /* Cambia la proporción para pantallas más pequeñas */
+  }
+  .project-details-tittle {
+    font-size: 1.8rem; /* Ajuste de tamaño de fuente */
+    margin-top: 10px; /* Ajuste específico para dispositivos móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header-image-container {
+    padding-bottom: 100%; /* Cambia a proporción 1:1 para móviles */
+  }
+  .project-details-tittle {
+    font-size: 1.5rem; /* Ajuste de tamaño de fuente */
+    margin-top: 5px; /* Ajuste específico para pantallas muy pequeñas */
+  }
+}
+
+
+
+
+/* .project-details-page-container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -69,3 +298,4 @@
   }
   
 
+ */

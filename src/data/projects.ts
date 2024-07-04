@@ -11,12 +11,14 @@ import polirubroGal2 from "../assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTIC
 const projects = [
   {
     title: 'Fast Delivery app',
-    description: 'Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium',
+    description: 'Fast Delivery app es una solución integral para la gestión y monitoreo de operaciones logísticas en la última milla. Diseñada específicamente para empresas con grandes flotas de repartidores, Fast Delivery proporciona una plataforma robusta para asignar, monitorear, y optimizar la distribución de paquetes en tiempo real.',
     image: fastDeliveryImage,
     demoVideo: "" /* fastDeliveryVideo */,
     details: [
-      'Fast Delivery app is a modern...',
-      'Features include fast tracking...'
+      'Monitoreo en Tiempo Real: isualización en tiempo real de la ubicación de todos los repartidores, permitiendo el seguimiento constante de las rutas y entregas.',
+      'Estado de Entrega: Actualización en tiempo real del estado de cada paquete, incluyendo entregado, en camino, y pendiente.',
+      "Gestión de Paquetes: los repartidores seleccionan hasta 10 paquetes diarios. Capacidad de reasinación dinámica por parte de administradores en función de cambios en la ruta, nuevas prioridades, o imprevistos. "
+      
     ],
     galleryImages: [
       { src: '../assets/images/fast1.png', caption: 'App screenshot 1', isHalfWidth: true },
@@ -26,8 +28,8 @@ const projects = [
     repository: { front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' }
   },
   {
-    title: 'Polirubro props',
-    description: 'Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium',
+    title: 'Polirubro Props',
+    description: 'Rental de utilería para cine - tv - publicidad. El objetivo del sitio es mostrar su catálogo de artículos a los clientes con filtros por categoría y color.',
     image: polirubroImage,
     demoVideo: polirubroVideo,
     details: [
@@ -38,7 +40,7 @@ const projects = [
       { src: polirubroGal1, caption: 'Store layout 1', isHalfWidth: true },
       { src: polirubroGal2, caption: 'Store layout 2', isHalfWidth: false }
     ],
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+    technologies: ['FaReact', 'Tailwind CSS', 'SiExpress', "SiJsonwebtokens", "SiMongodb", "FaDocker"],
     repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' }
   },
   {

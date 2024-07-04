@@ -1,4 +1,85 @@
-.project-details-page {
+/* Estilos CSS para ProjectDetails */
+.project-details {
+  margin-top: 0; /* Ajusta este valor según sea necesario para obtener el espaciado deseado */
+}
+
+.project-details-title {
+  font-size: 2.5rem; /* Tamaño del título */
+  text-align: center; /* Alineación centrada */
+  margin-top: 0;
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Contenedor principal de la galería */
+#project-gallery {
+  margin-top: 30px; /* Espacio superior */
+  /* overflow-x: auto; 
+  white-space: nowrap; 
+  padding-bottom: 10px;  */
+  display: flex; 
+  
+}
+
+/* Contenedor de las imágenes individuales */
+.project-gallery-content {
+  display: flex; /* Distribuye las imágenes en una fila */
+  gap: 10px; /* Espacio entre imágenes */
+}
+
+/* Estilo para cada imagen de la galería */
+.gallery-image-container {
+  display: inline-block; /* Mantiene las imágenes en línea */
+  width: 100px; /* Tamaño pequeño de la imagen */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  flex-shrink: 0; /* Evita que las imágenes se reduzcan más allá del tamaño definido */
+}
+
+.gallery-image {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Leyenda de la imagen */
+.image-caption {
+  font-size: 0.8rem; /* Tamaño del texto de la leyenda */
+  margin-top: 5px; /* Espacio superior */
+  text-align: center; /* Alineación centrada */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  .project-header-image-container {
+    max-width: 90%; /* Ancho máximo del contenedor de la imagen principal */
+  }
+  .project-details-title {
+    font-size: 2.5rem; /* Tamaño del título */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-header-image-container {
+    max-width: 100%; /* Ancho completo del contenedor de la imagen principal */
+    padding-bottom: 75%; /* Espacio inferior para mantener la proporción */
+  }
+  .project-details-title {
+    font-size: 2rem; /* Tamaño del título */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header-image-container {
+    padding-bottom: 100%; /* Espacio inferior para mantener la proporción */
+  }
+  .project-details-title {
+    font-size: 1.8rem; /* Tamaño del título */
+  }
+}
+
+
+
+
+/* .project-details-page {
     padding: 20px;
   }
   
@@ -7,7 +88,12 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+  .project-details-tittle {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 0.1;
+  }
+ 
   .body-text {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -17,6 +103,7 @@
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    margin-top: 5%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 2%;
 
@@ -24,16 +111,6 @@
     transition: transform 0.2s ease-in-out;
   }
   
- /*  .project-header-image:hover {
-    transform: scale(1.05); 
-    
-
-  } */
-  
-
-  #project-details {
-    margin-top: 30px;
-  }
   
   .subheader-text {
     font-size: 1.5rem;
@@ -118,4 +195,4 @@
     transform: translate(-50%, -50%) scale(1.1); 
     
   }
-  
+   */

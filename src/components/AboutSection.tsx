@@ -2,8 +2,15 @@ import React from 'react';
 import {
   FaReact, FaCss3Alt, FaNodeJs,FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello, FaAws, FaFileAlt
 } from 'react-icons/fa';
-import { SiKubernetes, SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb } from 'react-icons/si'; 
+import { SiKubernetes, SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb, SiUdemy} from 'react-icons/si'; 
 import '../css/AboutSection.css';
+import P5 from "../assets/icons/P5(1).jpg"
+import fei from "../assets/icons/FEI.jpg"
+import udemy from "../assets/icons/udemy.jpg"
+
+
+
+
 
 const AboutSection: React.FC = () => (
   <div id="about-section">
@@ -84,12 +91,15 @@ const AboutSection: React.FC = () => (
       <div className="section">
         <span className="subsection-title1">Education</span>
         <ul className="certificates-list">
-          <li className="certificate-item">JavaScript Coding Bootcamp, Full Stack Developer <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer">(P5)</a> </li>
-          <li className="certificate-item">DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD (Udemy)</li>
-          <li className="certificate-item">Computer cybersecurity in the company (Campus fp)</li>
+          <li className="certificate-item"> <a href="https://www.plataforma5.la/bootcamp/javascript" target="_blank" rel="noopener noreferrer"><img id='p5' className='school-icon' src={P5} alt="School Plataforma 5 Icon" /> </a>  JavaScript Coding Bootcamp, Full Stack Developer  </li>
+          <li className="certificate-item"> <a href='#' target="_blank" rel="noopener noreferrer"><img className='school-icon' src={udemy} alt="School Udemy Icon" /> </a>  DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD</li>
+          <li className="certificate-item"> <a href='#' target="_blank" rel="noopener noreferrer"><img className='school-icon' src={fei} alt="School FEI Icon" />  </a> Computer cybersecurity in the company</li>
          
         </ul>
-            <a  href="/ruta-a-cv.pdf" download id='cv' className="icon-link skill"><FaFileAlt /> <span className="skill-label">CV</span></a>
+        <div id='cv'>
+            <a  href="#"  className="icon-link skill"><FaFileAlt /> <span className="skill-label">CV</span></a>
+
+        </div>
       </div>
     </div>
   </div>

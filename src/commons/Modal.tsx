@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import '../css/Modal.css'; 
 
 
@@ -31,3 +31,4 @@ const Modal: React.FC<ModalProps> = ({ show, videoUrl, onClose }) => {
 };
 
 export default Modal;
+ 
