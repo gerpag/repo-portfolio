@@ -5,6 +5,7 @@ import PortfolioHeader from './components/PortfolioHeader';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import ProjectDetailsPage from './components/ProjectDetailsPage';
+import MoreProjects from './components/MoreProjects';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
 import './css/App.css';
@@ -24,6 +25,9 @@ const App: React.FC = () => (
             </>
           } />
           <Route path="/project/:title" element={<ProjectDetailsPage />} />
+          <Route path="/more-projects" element={<MoreProjects />} />
+          <Route path="/more-projects/:title" element={<ProjectDetailsPage />} />
+
         </Routes>
       </main>
       <Footer />
@@ -33,34 +37,3 @@ const App: React.FC = () => (
 
 export default App;
 
-
-
-
-
-
-
-/* import React from 'react';
-
-
-import Navbar from './components/Navbar';
-import PortfolioHeader from './components/PortfolioHeader';
-import AboutSection from './components/AboutSection';
-import ProjectsSection from './components/ProjectsSection';
-import Footer from './components/Footer';
-import ContactForm from './components/ContactForm';
-import '../src/css/App.css';
-
-const App: React.FC = () => (
-  <div className="App">
-    <Navbar />
-    <main id="main-content">
-      <PortfolioHeader />
-      <ProjectsSection />
-      <AboutSection />
-      <ContactForm />
-    </main>
-    <Footer />
-  </div>
-);
-
-export default App; */

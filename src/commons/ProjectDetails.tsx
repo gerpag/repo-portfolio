@@ -1,36 +1,44 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import ModalImage from './ModalImage';
+import { techIcons } from '../data/techIcons';
+import { FaGithub } from 'react-icons/fa';
 import '../css/ProjectDetails.css';
+
+interface GalleryImage {
+  src: string;
+  caption: string;
+  isHalfWidth: boolean;
+}
 
 interface ProjectDetailsProps {
   name: string;
+  subTitle?: string;
   description: string;
   image: string;
-  demoVideo: string;
+  demoVideo?: string;
   details: string[];
-  galleryImages: { src: string; caption: string; isHalfWidth: boolean }[];
+  galleryImages: GalleryImage[];
   technologies?: string[];
   repository?: { front: string; back: string };
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   name,
+  subTitle,
   description,
   image,
   demoVideo,
   details,
   galleryImages,
   technologies = [],
-  repository = { front: '', back: '' }
+  repository = { front: '', back: '' },
 }) => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleVideoClick = () => {
-    setShowVideoModal(true);
-  };
+  const handleVideoClick = () => setShowVideoModal(true);
 
   const handleImageClick = (index: number) => {
     setCurrentImageIndex(index);
@@ -56,63 +64,106 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
   return (
     <div className="project-details">
-      <h1 className='project-details-title'>{name}</h1>
-      <div className="project-header-image-container" onClick={handleVideoClick}>
-        <img
-          src={image}
-          alt={name}
-          className="project-header-image"
-        />
-        <span className="project-demo-text">Demo</span>
-      </div>
-      
-      <p className="body-text">{description}</p>
-      
-      <h2>Details</h2>
-      <ul>
-        {details.map((detail, index) => (
-          <li key={index} className="body-text">{detail}</li>
-        ))}
-      </ul>
-      
+      <header>
+        <h1 className="project-details-title">{name}</h1>
+        <p className="project-subtitle">{subTitle}</p>
+        <div
+          className="project-header-image-container"
+          onClick={handleVideoClick}
+        >
+          <img
+            src={image}
+            alt={name}
+            className="project-header-image"
+          />
+          <span className="project-demo-text">Demo</span>
+        </div>
+      </header>
+
+      <section className="project-description">
+        <p className="body-text">{description}</p>
+      </section>
+
       {technologies.length > 0 && (
-        <>
+        <section className="project-technologies">
           <h2>Technologies</h2>
-          <ul>
-            {technologies.map((tech, index) => (
-              <li key={index} className="body-text">{tech}</li>
-            ))}
-          </ul>
-        </>
+          <div className="technology-list">
+            {technologies.map((tech, index) => {
+              const IconComponent = techIcons[tech];
+              return (
+                <div key={index} className="technology">
+                  {IconComponent ? <IconComponent /> : <span>{tech}</span>}
+                  <div className="technology-label">{tech}</div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
       )}
 
-      {repository.front || repository.back ? (
-        <>
+      <section className="project-details-content">
+        <h2>Details</h2>
+        <ul className="body-text">
+          {details.map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      </section>
+
+      {(repository.front || repository.back) && (
+        <section className="project-repository">
           <h2>Repository</h2>
-          <ul>
+          <ul className="body-text repository-list">
             {repository.front && (
-              <li className="body-text">Frontend: <a href={repository.front} target="_blank" rel="noopener noreferrer">{repository.front}</a></li>
+              <li className="repository-item">
+                <a
+                  href={repository.front}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <FaGithub />
+                Frontend
+                 
+                </a>
+              </li>
             )}
             {repository.back && (
-              <li className="body-text">Backend: <a href={repository.back} target="_blank" rel="noopener noreferrer">{repository.back}</a></li>
+              <li className="repository-item">
+                <a
+                  href={repository.back}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <FaGithub />
+                Backend
+                </a>
+              </li>
             )}
           </ul>
-        </>
-      ) : null}
+        </section>
+      )}
 
-      <h2>Gallery</h2>
-      <div id="project-gallery" className="project-gallery-content">
-        {galleryImages.map((image, index) => (
-          <div
-            key={index}
-            className={`gallery-image-container ${image.isHalfWidth ? 'half-width' : ''}`}
-            onClick={() => handleImageClick(index)}
-          >
-            <img src={image.src} alt={image.caption} className="gallery-image" />
-            <p className="image-caption">{image.caption}</p>
+      <section className="project-gallery">
+        <h2>Gallery</h2>
+        <div className="gallery-carousel">
+          <div className="gallery-carousel-container">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="gallery-image-container"
+                onClick={() => handleImageClick(index)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.caption}
+                  className="gallery-image"
+                />
+                <p className="image-caption">{image.caption}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
       <Modal
         show={showVideoModal}
@@ -132,5 +183,3 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 };
 
 export default ProjectDetails;
-
-

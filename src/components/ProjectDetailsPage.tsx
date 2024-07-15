@@ -2,13 +2,13 @@ import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectDetails from '../commons/ProjectDetails';
 import "../css/ProjectDetailsPage.css";
-import projects from '../data/projects';
+import {projectsDetail}  from '../data/projects';
 
 const ProjectDetailsPage: React.FC = () => {
   const { title } = useParams<{ title: string }>();
 
   
-  const project = projects.find(p => 
+  const project = projectsDetail.find(p => 
     p.title.toLowerCase().replace(/\s+/g, '-') === title?.toLowerCase()
   );
 
@@ -24,6 +24,7 @@ const ProjectDetailsPage: React.FC = () => {
     <div className="project-details-page">
       <ProjectDetails
         name={project.title}
+        subTitle={project.subTitle}
         description={project.description}
         image={project.image}
         demoVideo={project.demoVideo} 

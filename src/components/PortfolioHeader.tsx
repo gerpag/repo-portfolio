@@ -21,7 +21,7 @@ const PortfolioHeader: React.FC = () => (
       <div id='gh-cv-lk' className="icon-links">
         <a href="https://github.com/gerpag" target="_blank" rel="noopener noreferrer" className="icon-link"><FaGithub /></a>
           
-        <a href="/ruta-a-cv.pdf" download className="icon-link"><FaFileAlt /></a>
+        <a  href="https://drive.google.com/file/d/1Z1JbXwXGRB9XkayJGxHim3Ueu1Fb9jzh/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="icon-link"><FaFileAlt /></a>
         <a href="mailto:germinalfp@gmail.com" className="icon-link"><FaEnvelope /></a>
         <a href="https://www.linkedin.com/in/germinal-pagliuca" target="_blank" rel="noopener noreferrer" className="icon-link"><FaLinkedin /></a>
         <a href="https://discordapp.com/users/724728588519342100" target="_blank" rel="noopener noreferrer" className="icon-link"><FaDiscord /></a>
