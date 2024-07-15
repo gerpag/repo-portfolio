@@ -128,8 +128,16 @@
   border-radius: 20%;
   width: 30px;
 }
+#fei {
+  height: 30px;
+  
+}
 
 
-#id {
-  margin-top: 20%;
+#cv {
+  margin-top: 10%;
+}
+
+#schools {
+  text-align: center;
 }
