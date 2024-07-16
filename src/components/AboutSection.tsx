@@ -90,9 +90,9 @@ const AboutSection: React.FC = () => (
         <ul className="certificates-list">
     
 
-          <li className="certificate-item">  JavaScript Coding Bootcamp, Full Stack Developer <a href="https://drive.google.com/file/d/1-Pa8I0YoHXOoxVdUCmL45uRBUX-sYRZu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" ><FaFileAlt /></a>  </li>
-          <li className="certificate-item">  DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD <a href="#" target="_blank" rel="noopener noreferrer" ><FaFileAlt /></a></li>
-          <li className="certificate-item">Computer cybersecurity in the company <a href="https://drive.google.com/file/d/1tNB_0LRuOvIJbcGJSU8CLyss-4hCAxys/view?usp=drive_link" target="_blank" rel="noopener noreferrer" ><FaFileAlt /></a> </li>
+          <li className="certificate-item">  JavaScript Coding Bootcamp, Full Stack Developer <a href="https://drive.google.com/file/d/1-Pa8I0YoHXOoxVdUCmL45uRBUX-sYRZu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a>  </li>
+          <li className="certificate-item">  DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD <a href="#" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a></li>
+          <li className="certificate-item">Computer cybersecurity in the company <a href="https://drive.google.com/file/d/1tNB_0LRuOvIJbcGJSU8CLyss-4hCAxys/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a> </li>
          
         </ul>
         <div id='cv'>
