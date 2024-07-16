@@ -8,9 +8,12 @@ import ProjectDetailsPage from './components/ProjectDetailsPage';
 import MoreProjects from './components/MoreProjects';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
+import { ThemeProvider } from './context/ThemeContext';
+
 import './css/App.css';
 
 const App: React.FC = () => (
+  <ThemeProvider>
   <Router>
     <div className="App">
       <Navbar />
@@ -33,6 +36,7 @@ const App: React.FC = () => (
       <Footer />
     </div>
   </Router>
+  </ThemeProvider>
 );
 
 export default App;

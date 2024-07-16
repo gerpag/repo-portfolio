@@ -1,4 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+
+const useThemeToggle = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useThemeToggle must be used within a ThemeProvider');
+  }
+  return context;
+};
+
+export default useThemeToggle;
+
+
+
+/* import { useState, useEffect } from 'react';
 
 const useThemeToggle = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -19,4 +34,4 @@ const useThemeToggle = () => {
   return { theme, toggleTheme };
 };
 
-export default useThemeToggle;
+export default useThemeToggle; */
