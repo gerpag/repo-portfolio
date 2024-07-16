@@ -92,12 +92,20 @@
   padding: 0;
   text-align: left;
   font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
-.certificate-item {
+.downLoadCertficate {
+
+  flex-direction: column;
+  align-items: center;
   font-size: 1.5rem; 
-  margin-bottom: 0.625rem; 
-  margin-left: 7%;
+  color: var(--primary-color);
+  transition: color 0.3s, transform 0.3s;
+}
+.downLoadCertficate:hover {
+  color: #bec8d3;
+  transform: rotate(10deg);
 }
 
 @media (max-width: 768px) {
