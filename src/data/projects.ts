@@ -1,4 +1,408 @@
+import {translate}  from '../i18n';
+import fastDeliveryImage from "../assets/images/FastDelivery.jpg"
 
+interface GalleryImage {
+  src: string;
+  captionKey: string; 
+  isHalfWidth: boolean;
+}
+
+interface Repository {
+  front: string;
+  back: string;
+}
+
+interface ProjectDetail {
+  titleKey: string; 
+  subTitleKey?: string; 
+  descriptionKey: string; 
+  deploy?: string; 
+  image: string; 
+  demoVideo?: string; 
+  details: string[]; 
+  galleryImages: GalleryImage[]; 
+  technologies: string[]; 
+  repository: Repository; 
+  contribution?: string; 
+  link?: string; 
+}
+
+interface Project {
+  titleKey: string; 
+  image: string; 
+  link: string; 
+}
+
+
+const projectsDetail: ProjectDetail[] = [
+  {
+    titleKey: 'projectsDetail.fastDelivery.title',
+    subTitleKey: 'projectsDetail.fastDelivery.subTitle',
+    descriptionKey: 'projectsDetail.fastDelivery.description',
+    deploy: '',
+    image: '../assets/images/FastDelivery.jpg',
+    demoVideo: '',
+    details: [
+      translate('projectsDetail.fastDelivery.detail1'),
+      translate('projectsDetail.fastDelivery.detail2'),
+      translate('projectsDetail.fastDelivery.detail3'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/fast1.png', captionKey: 'projectsDetail.fastDelivery.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/fast2.png', captionKey: 'projectsDetail.fastDelivery.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
+    repository: { front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'projectsDetail.polirubro.title',
+    subTitleKey: 'projectsDetail.polirubro.subTitle',
+    descriptionKey: 'projectsDetail.polirubro.description',
+    deploy: '',
+    image: '../assets/images/polirubro.png',
+    demoVideo: '/assets/videos/polirubro.webm',
+    details: [
+      translate('projectsDetail.polirubro.detail1'),
+      translate('projectsDetail.polirubro.detail2'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/polirubro-gal/BOLSA-PLÁSTICO-ESTAMPADA IKEA-AZUL-NO-NO.jpg', captionKey: 'projectsDetail.polirubro.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTICO-RAYAS-BLANCO.NARANJA-NO-NO.jpg', captionKey: 'projectsDetail.polirubro.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'TailwindCSS', 'Express', 'JWT', 'MongoDB', 'Docker'],
+    repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'projectsDetail.houseOfDev.title',
+    subTitleKey: 'projectsDetail.houseOfDev.subTitle',
+    descriptionKey: 'projectsDetail.houseOfDev.description',
+    deploy: '',
+    image: '../assets/images/HouseOfDev.png',
+    demoVideo: '',
+    details: [
+      translate('projectsDetail.houseOfDev.detail1'),
+      translate('projectsDetail.houseOfDev.detail2'),
+      translate('projectsDetail.houseOfDev.detail3'),
+      translate('projectsDetail.houseOfDev.detail4'),
+      translate('projectsDetail.houseOfDev.detail5'),
+      translate('projectsDetail.houseOfDev.detail6'),
+      translate('projectsDetail.houseOfDev.detail7'),
+      translate('projectsDetail.houseOfDev.detail8'),
+      translate('projectsDetail.houseOfDev.detail9'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/house1.png', captionKey: 'projectsDetail.houseOfDev.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/house2.png', captionKey: 'projectsDetail.houseOfDev.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Redux', 'TailwindCSS', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'NodeMailer'],
+    repository: { front: 'https://github.com/user/house-of-dev-frontend', back: 'https://github.com/user/house-of-dev-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'projectsDetail.tmdba.title',
+    subTitleKey: 'projectsDetail.tmdba.subTitle',
+    descriptionKey: 'projectsDetail.tmdba.description',
+    deploy: '',
+    image: '../assets/images/TMDB.jpeg',
+    demoVideo: '/assets/videos/tmdba.mp4',
+    details: [
+      translate('projectsDetail.tmdba.detail1'),
+      translate('projectsDetail.tmdba.detail2'),
+      translate('projectsDetail.tmdba.detail3'),
+      translate('projectsDetail.tmdba.detail4'),
+      translate('projectsDetail.tmdba.detail5'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/tmdb1.png', captionKey: 'projectsDetail.tmdba.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/tmdb2.png', captionKey: 'projectsDetail.tmdba.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Redux', 'Express', 'JWT', 'NodeJS'],
+    repository: { front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'projectsDetail.portfolio.title',
+    subTitleKey: 'projectsDetail.portfolio.subTitle',
+    descriptionKey: 'projectsDetail.portfolio.description',
+    deploy: '',
+    image: '../assets/images/Portfolio.png',
+    demoVideo: '',
+    details: [
+      translate('projectsDetail.portfolio.detail1'),
+      translate('projectsDetail.portfolio.detail2'),
+      translate('projectsDetail.portfolio.detail3'),
+      translate('projectsDetail.portfolio.detail4'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/portfolio1.png', captionKey: 'projectsDetail.portfolio.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/portfolio2.png', captionKey: 'projectsDetail.portfolio.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Vite', 'CSS', 'NodeJS', 'Express', 'MongoDB', 'Docker'],
+    repository: { front: 'https://github.com/user/portfolio-frontend', back: '' },
+    contribution: '',
+  },
+];
+
+const projects: Project[] = [
+  {
+    titleKey: 'projects.fastDelivery.title',
+    image: fastDeliveryImage,
+    link: '/project/fast-delivery-app',
+  },
+  {
+    titleKey: 'projects.polirubro.title',
+    image: '../assets/images/polirubro.png',
+    link: '/project/polirubro-props',
+  },
+  {
+    titleKey: 'projects.portfolio.title',
+    image: '../assets/images/Portfolio.png',
+    link: '/project/portfolio',
+  },
+  {
+    titleKey: 'projects.moreProjects.title',
+    image: '../assets/images/more-projects.jpg',
+    link: '/more-projects',
+  },
+];
+
+const moreProjects: Project[] = [
+  {
+    titleKey: 'moreProjects.houseOfDev.title',
+    image: '/assets/images/HouseOfDev.png',
+    link: '/more-projects/house-of-dev',
+  },
+  {
+    titleKey: 'moreProjects.tmdba.title',
+    image: '/assets/images/TMDB.jpeg',
+    link: '/more-projects/tmdba',
+  },
+  {
+    titleKey: 'moreProjects.eCommerce.title',
+    image: '/assets/images/e-commerce.jpg',
+    link: '/more-projects/e-commerce',
+  },
+];
+
+export { projectsDetail, projects, moreProjects };
+
+
+
+
+
+
+
+
+/* import { translate } from '../i18n'; 
+
+interface GalleryImage {
+  src: string;
+  captionKey: string; // Clave para la traducción de la leyenda de la imagen
+  isHalfWidth: boolean;
+}
+
+interface Repository {
+  front: string;
+  back: string;
+}
+
+interface ProjectDetail {
+  titleKey: string; 
+  subTitleKey?: string; // Clave para la traducción del subtítulo del detalle del proyecto (opcional)
+  descriptionKey: string; // Clave para la traducción de la descripción del detalle del proyecto
+  deploy?: string; // Ruta de implementación (opcional)
+  image: string; // Ruta de la imagen principal
+  demoVideo?: string; // Ruta del video (opcional)
+  details: string[]; // Detalles del proyecto
+  galleryImages: GalleryImage[]; // Arreglo de imágenes de galería
+  technologies: string[]; // Tecnologías utilizadas
+  repository: Repository; // Repositorios front-end y back-end
+  contribution?: string; // Contribución (opcional)
+  link?: string; // Ruta a la página del proyecto (opcional)
+}
+
+interface Project {
+  titleKey: string; // Clave para la traducción del título del proyecto
+  image: string; // Ruta de la imagen
+  link: string; // Ruta a la página del proyecto
+}
+
+
+
+
+
+
+const projectsDetail: ProjectDetail[] = [
+  {
+    titleKey: 'project.fastDelivery.title',
+    subTitleKey: 'project.fastDelivery.subTitle',
+    descriptionKey: 'project.fastDelivery.description',
+    deploy: '',
+    image: '/assets/images/FastDelivery.jpg',
+    demoVideo: '',
+    details: [
+      translate('project.fastDelivery.detail1'),
+      translate('project.fastDelivery.detail2'),
+      translate('project.fastDelivery.detail3'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/fast1.png', captionKey: 'project.fastDelivery.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/fast2.png', captionKey: 'project.fastDelivery.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
+    repository: { front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'project.polirubro.title',
+    subTitleKey: 'project.polirubro.subTitle',
+    descriptionKey: 'project.polirubro.description',
+    deploy: '',
+    image: '/assets/images/polirubro.png',
+    demoVideo: '/assets/videos/polirubro.webm',
+    details: [
+      translate('project.polirubro.detail1'),
+      translate('project.polirubro.detail2'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/polirubro-gal/BOLSA-PLÁSTICO-ESTAMPADA IKEA-AZUL-NO-NO.jpg', captionKey: 'project.polirubro.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTICO-RAYAS-BLANCO.NARANJA-NO-NO.jpg', captionKey: 'project.polirubro.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'TailwindCSS', 'Express', 'JWT', 'MongoDB', 'Docker'],
+    repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'project.houseOfDev.title',
+    subTitleKey: 'project.houseOfDev.subTitle',
+    descriptionKey: 'project.houseOfDev.description',
+    deploy: '',
+    image: '/assets/images/HouseOfDev.png',
+    demoVideo: '',
+    details: [
+      translate('project.houseOfDev.detail1'),
+      translate('project.houseOfDev.detail2'),
+      translate('project.houseOfDev.detail3'),
+      translate('project.houseOfDev.detail4'),
+      translate('project.houseOfDev.detail5'),
+      translate('project.houseOfDev.detail6'),
+      translate('project.houseOfDev.detail7'),
+      translate('project.houseOfDev.detail8'),
+      translate('project.houseOfDev.detail9'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/house1.png', captionKey: 'project.houseOfDev.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/house2.png', captionKey: 'project.houseOfDev.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Redux', 'TailwindCSS', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'NodeMailer'],
+    repository: { front: 'https://github.com/user/house-of-dev-frontend', back: 'https://github.com/user/house-of-dev-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'project.tmdba.title',
+    subTitleKey: 'project.tmdba.subTitle',
+    descriptionKey: 'project.tmdba.description',
+    deploy: '',
+    image: '/assets/images/TMDB.jpeg',
+    demoVideo: '/assets/videos/tmdba.mp4',
+    details: [
+      translate('project.tmdba.detail1'),
+      translate('project.tmdba.detail2'),
+      translate('project.tmdba.detail3'),
+      translate('project.tmdba.detail4'),
+      translate('project.tmdba.detail5'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/tmdb1.png', captionKey: 'project.tmdba.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/tmdb2.png', captionKey: 'project.tmdba.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Redux', 'Express', 'JWT', 'NodeJS'],
+    repository: { front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
+    contribution: '',
+  },
+  {
+    titleKey: 'project.portfolio.title',
+    subTitleKey: 'project.portfolio.subTitle',
+    descriptionKey: 'project.portfolio.description',
+    deploy: '',
+    image: '/assets/images/Portfolio.png',
+    demoVideo: '',
+    details: [
+      translate('project.portfolio.detail1'),
+      translate('project.portfolio.detail2'),
+      translate('project.portfolio.detail3'),
+      translate('project.portfolio.detail4'),
+    ],
+    galleryImages: [
+      { src: '/assets/images/portfolio1.png', captionKey: 'project.portfolio.galleryImage1.caption', isHalfWidth: true },
+      { src: '/assets/images/portfolio2.png', captionKey: 'project.portfolio.galleryImage2.caption', isHalfWidth: false },
+    ],
+    technologies: ['React', 'Vite', 'CSS', 'NodeJS', 'Express', 'MongoDB', 'Docker'],
+    repository: { front: 'https://github.com/user/portfolio-frontend', back: '' },
+    contribution: '',
+  },
+];
+
+
+
+const projects: Project[] = [
+  {
+    titleKey: 'Delivery App',
+    image: '../assets/images/FastDelivery.jpg',
+    link: '/project/fast-delivery-app',
+  },
+  {
+    titleKey: 'Digital Catalog',
+    image: '../assets/images/polirubro.png',
+    link: '/project/polirubro-props',
+  },
+  {
+    titleKey: 'Portfolio',
+    image: '../assets/images/Portfolio.png',
+    link: '/project/portfolio',
+  },
+  {
+    titleKey: 'moreProjects.moreProjects.title',
+    image: '../assets/images/more-projects.jpg',
+    link: '/more-projects',
+  },
+];
+
+const moreProjects: Project[] = [
+  {
+    titleKey: 'moreProjects.houseOfDev.title',
+    image: '/assets/images/HouseOfDev.png',
+    link: '/more-projects/house-of-dev',
+  },
+  {
+    titleKey: 'moreProjects.tmdba.title',
+    image: '/assets/images/TMDB.jpeg',
+    link: '/more-projects/tmdba',
+  },
+  {
+    titleKey: 'moreProjects.eCommerce.title',
+    image: '/assets/images/e-commerce.jpg',
+    link: '/more-projects/e-commerce',
+  },
+];
+
+
+
+
+
+export { projectsDetail, projects, moreProjects };
+
+
+ */
+
+
+
+
+
+
+/* 
 import fastDeliveryImage from '../assets/images/FastDelivery.jpg';
 import houseOfDevImage from '../assets/images/HouseOfDev.png';
 import polirubroImage from '../assets/images/polirubro.png';
@@ -216,3 +620,4 @@ const moreProjects: Project[] = [
 export  {projectsDetail, projects, moreProjects};
 
 
+ */

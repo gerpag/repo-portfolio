@@ -9,33 +9,38 @@ import MoreProjects from './components/MoreProjects';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
 import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider} from "./context/LanguageContext"
 
 import './css/App.css';
 
 const App: React.FC = () => (
   <ThemeProvider>
-  <Router>
-    <div className="App">
-      <Navbar />
-      <main id="main-content">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <PortfolioHeader />
-              <ProjectsSection />
-              <AboutSection />
-              <ContactForm />
-            </>
-          } />
-          <Route path="/project/:title" element={<ProjectDetailsPage />} />
-          <Route path="/more-projects" element={<MoreProjects />} />
-          <Route path="/more-projects/:title" element={<ProjectDetailsPage />} />
+    <LanguageProvider>
 
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  </Router>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <main id="main-content">
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <PortfolioHeader />
+                    <ProjectsSection />
+                    <AboutSection />
+                    <ContactForm />
+                  </>
+                } />
+                <Route path="/project/:title" element={<ProjectDetailsPage />} />
+                <Route path="/more-projects" element={<MoreProjects />} />
+                <Route path="/more-projects/:title" element={<ProjectDetailsPage />} />
+
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+    </LanguageProvider>
+  
   </ThemeProvider>
 );
 
