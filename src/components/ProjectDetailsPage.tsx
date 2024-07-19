@@ -2,13 +2,17 @@ import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectDetails from '../commons/ProjectDetails';
 import "../css/ProjectDetailsPage.css";
-import {projectsDetail}  from '../data/projects';
+import {projectsDetail}  from '../data/projectsDetail';
+import { useLanguage } from '../context/LanguageContext';
+import "../i18n";
 
 const ProjectDetailsPage: React.FC = () => {
   const { title } = useParams<{ title: string }>();
-
   
-  const project = projectsDetail.find(p => 
+  const { language, translate } = useLanguage();
+  const selectedProjects = projectsDetail[language];
+  
+  const project = selectedProjects.find(p => 
     p.title.toLowerCase().replace(/\s+/g, '-') === title?.toLowerCase()
   );
 
