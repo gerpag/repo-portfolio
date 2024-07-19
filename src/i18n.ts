@@ -19,12 +19,9 @@ interface Translations {
       'header.training': 'I studied full stack web development at Henry Bootcamp.',
   
       // Proyectos
-      'projects.title': 'Projects',
-      'projects.description': 'Here you can find some of my work as a developer',
-      'projects.fastDelivery.title': 'Delivery App',
-      'projects.polirubro.title': 'Digital Catalog',
-      'projects.portfolio.title': 'Portfolio',
-      'moreProjects.moreProjects.title': 'More Projects',
+      'projectsSection.title': 'Projects',
+      'projectsSection.readMore': "Read more",
+     
   
       // Detalles de los proyectos
       'projectsDetail.fastDelivery.title': 'Fast Delivery App',
@@ -104,12 +101,9 @@ interface Translations {
       'header.training': 'Estudié desarrollo web full stack en el bootcamp de Henry.',
   
       // Proyectos
-      'projects.title': 'Proyectos',
-      'projects.description': 'Aquí puedes encontrar algunos de mis trabajos como desarrollador',
-      'projects.fastDelivery.title': 'Aplicación de Repartos',
-      'projects.polirubro.title': 'Catálogo digital',
-      'projects.portfolio.title': 'Portafolio',
-      'projects.moreProjects.title': 'Más Proyectos',
+      'projectsSection.title': 'Proyectos',
+      'projectsSection.readMore': "Leer más",
+      
   
       // Detalles de los proyectos
       'projectsDetail.fastDelivery.title': 'Fast Delivery App',
