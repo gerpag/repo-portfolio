@@ -29,7 +29,7 @@ interface Translations {
       'moreProjectsSection.title': "More Projects",  
 
 
-      //ProjectsDetails (/common):
+      //ProjectsDetails (/common component):
 
       "projectsDetails.technologies": "Technologies",
       "projectsDetails.detail": "Details", 
