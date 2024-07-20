@@ -24,6 +24,10 @@ interface Translations {
       'projectsSection.title': 'Projects',
       'projectsSection.readMore': "Read more",
 
+      //moreProjects:
+
+      'moreProjectsSection.title': "More Projects",  
+
 
       //ProjectsDetails (/common):
 
@@ -36,20 +40,20 @@ interface Translations {
 
     //Contact: 
 
-      'contact.title': 'Get in Touch',
+      'contact.title': 'Contact me',
       'contact.description': 'Feel free to reach out for collaborations or just a friendly chat.',
       'contact.form.name': 'Name',
+      'contact.form.subject': 'Subject',
       'contact.form.email': 'Email',
       'contact.form.message': 'Message',
       'contact.form.submit': 'Submit',
-      'contact.form.success': 'Your message has been sent successfully!',
+      'contact.form.success': 'Thanks for contacting me!',
       'contact.form.error': 'An error occurred. Please try again.',
       
   
       // Footer
-      'footer.contactInfo': 'Contact Information',
-      'footer.followMe': 'Follow me on social media',
-      'footer.rightsReserved': 'All rights reserved.',
+      
+      'footer.rightsReserved': 'Germinal Pagliuca. All rights reserved.',
   
       
     },
@@ -71,6 +75,11 @@ interface Translations {
       'projectsSection.title': 'Proyectos',
       'projectsSection.readMore': "Leer más",
 
+
+      // Más proyectos
+      'moreProjectsSection.title': "Más Proyectos",  
+
+
       //ProjectsDetails (/common):
 
       "projectsDetails.technologies": "Tecnologías",
@@ -84,6 +93,7 @@ interface Translations {
       'contact.title': 'Ponte en contacto',
       'contact.description': 'No dudes en comunicarte para colaboraciones o simplemente una charla amistosa.',
       'contact.form.name': 'Nombre',
+      'contact.form.subject': "Asunto",
       'contact.form.email': 'Correo electrónico',
       'contact.form.message': 'Mensaje',
       'contact.form.submit': 'Enviar',
@@ -93,9 +103,8 @@ interface Translations {
       // Footer 
       
       
-      'footer.contactInfo': 'Información de contacto',
-      'footer.followMe': 'Sígueme en las redes sociales',
-      'footer.rightsReserved': 'Todos los derechos reservados.',
+    
+      'footer.rightsReserved': 'Germinal Pagliuca.Todos los derechos reservados.',
     }
   
   };
