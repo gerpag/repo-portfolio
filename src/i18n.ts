@@ -14,11 +14,11 @@ interface Translations {
   
       // Header 
 
-  'header.mainTitle': "Hey, I’m Germinal.",
-'header.profession': "I’m a full stack web developer.",
-'header.interests': 'I’m interested in the intersection of technology and philosophy.',
-'header.training': 'I studied full stack web development.',
-'header.goals': "My goal is to continue learning and bridging these fields that I am passionate about.",
+      'header.mainTitle': "Hey, I’m Germinal.",
+      'header.profession': "I’m a full stack web developer.",
+      'header.interests': 'I’m interested in the intersection of technology and philosophy.',
+      'header.training': 'I studied full stack web development.',
+      'header.goals': "My goal is to continue learning and bridging these fields that I am passionate about.",
   
       // Projects
 
@@ -74,12 +74,12 @@ interface Translations {
       'navbar.contact': 'Contacto',
   
      // Encabezado principal
-'header.mainTitle': "Hola, soy Germinal.",
-'header.profession': "Soy desarrollador web full stack.",
-'header.interests': 'Me interesa la intersección entre la tecnología y la filosofía.',
-'header.training': 'Me formé recientemente en desarrollo web full stack.',
-'header.goals': "Mi objetivo es seguir aprendiendo y conectando estos campos que me apasionan.",
-  
+      'header.mainTitle': "Hola, soy Germinal.",
+      'header.profession': "Soy desarrollador web full stack.",
+      'header.interests': 'Me interesa la intersección entre la tecnología y la filosofía.',
+      'header.training': 'Me formé recientemente en desarrollo web full stack.',
+      'header.goals': "Mi objetivo es seguir aprendiendo y conectando estos campos que me apasionan.",
+        
       // Proyectos
       'projectsSection.title': 'Proyectos',
       'projectsSection.readMore': "Leer más",
@@ -131,7 +131,7 @@ interface Translations {
     
     if (!translations[language]) {
       console.warn(`Idioma '${language}' no definido. Usando idioma predeterminado 'en'.`);
-      language = 'en'; // Usa 'en' como idioma predeterminado
+      language = 'en'; 
     }
   
     

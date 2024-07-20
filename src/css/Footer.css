@@ -1,6 +1,6 @@
 #footer {
-  background-color: var(--background-dark-color); /* Ajusta según la variable de color adecuada */
-  color: var(--primary-color); /* Ajusta según la variable de color adecuada */
+  background-color: var(--background-dark-color); 
+  color: var(--primary-color); 
   text-align: center;
   padding: 20px 0;
   position: relative;
@@ -19,52 +19,16 @@
 
 .footer-icon {
   margin-right: 5px;
-  color: var(--primary-color); /* Usar la variable para cambiar el color del icono */
+  color: var(--primary-color); 
 }
 
-/* Tema oscuro */
+
 body.dark-theme #footer {
   background-color: var(--background-dark-color);
   color: var(--text-light-color);
 }
 
 body.dark-theme .footer-icon {
-  color: var(--text-light-color); /* Cambia el color del icono en el tema oscuro */
+  color: var(--text-light-color); 
 }
 
-
-
-/* #footer {
-  background-color: #f8f9fa;;
-  color: var(--footer-text);
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.3rem;
-}
-
-.footer-icon {
-  margin-right: 5px;
-}
-
-
-[data-theme="dark"] {
-  --footer-background: #333;
-  --footer-text: #fff;
-}
-
-
-:root {
-  --footer-background: #f8f9fa;
-  --footer-text: #000;
-}
- */
