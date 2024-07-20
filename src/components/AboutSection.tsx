@@ -3,18 +3,24 @@ import {
   FaReact, FaCss3Alt, FaNodeJs,FaDocker, FaJenkins, FaGithub, FaGitAlt, FaTrello, FaAws, FaFileAlt
 } from 'react-icons/fa';
 import { SiKubernetes, SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb} from 'react-icons/si'; 
+import { useLanguage } from '../context/LanguageContext';
+import "../i18n";
 import '../css/AboutSection.css';
 
 
 
 
 
-const AboutSection: React.FC = () => (
+const AboutSection: React.FC = () => {
+
+  const { translate } = useLanguage();
+  
+  return(
   <div id="about-section">
-    <h2 className="section-title">My Background</h2>
+    <h2 className="section-title">{translate('about.title')}</h2>
     <div className="about-section-content">
       <div className="skills-section">
-        <span className="subsection-title1">Technical Skills</span>
+        <span className="subsection-title1">{translate('about.skills')} </span>
         <div className="skill-category">
           <div className="skills-list">
             <div className="skill">
@@ -86,13 +92,13 @@ const AboutSection: React.FC = () => (
       
       </div>
       <div className="section">
-        <span className="subsection-title1">Education</span>
+        <span className="subsection-title1">{translate('about.education')}</span>
         <ul className="certificates-list">
     
 
           <li className="certificate-item">  JavaScript Coding Bootcamp, Full Stack Developer <a href="https://drive.google.com/file/d/1-Pa8I0YoHXOoxVdUCmL45uRBUX-sYRZu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a>  </li>
-          <li className="certificate-item">  DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD <a href="#" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a></li>
-          <li className="certificate-item">Computer cybersecurity in the company <a href="https://drive.google.com/file/d/1tNB_0LRuOvIJbcGJSU8CLyss-4hCAxys/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a> </li>
+          <li className="certificate-item">  {translate('about.devops.course')} <a href="#" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a></li>
+          <li className="certificate-item">{translate('about.sec.course')} <a href="https://drive.google.com/file/d/1tNB_0LRuOvIJbcGJSU8CLyss-4hCAxys/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className='downLoadCertficate'><FaFileAlt /></a> </li>
          
         </ul>
         <div id='cv'>
@@ -103,6 +109,7 @@ const AboutSection: React.FC = () => (
     </div>
   </div>
 );
+}
 
 export default AboutSection;
 
