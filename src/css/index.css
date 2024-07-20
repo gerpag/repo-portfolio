@@ -8,6 +8,7 @@
   --font-size-medium: 1em;
   --font-size-small: 0.9em;
   --text-light-color: #ffffff;
+  --text-dark-color: #333;  /* Añadido para el texto oscuro */
   --navbar-shadow-light: 0 0.5px 2px rgba(0, 0, 0, 0.1);
   --navbar-shadow-dark: 0 0.5px 2px rgba(237, 225, 225, 0.2);
 }
@@ -19,6 +20,7 @@ body.light-theme {
   --background-color: #ffffff;
   --background-dark-color: #ffffff;
   --text-light-color: #333;
+  --text-dark-color: #333;  /* Asegurando el uso de text-dark-color */
   --navbar-shadow-light: 0 0.5px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,6 +31,7 @@ body.dark-theme {
   --background-color: #242424;
   --background-dark-color: #242424;
   --text-light-color: #ffffff;
+  --text-dark-color: #ffffff;  /* Asegurando el uso de text-light-color */
   --navbar-shadow-dark: 0 0.5px 3px rgba(237, 225, 225, 0.2);
 }
 
@@ -147,7 +150,183 @@ body.dark-theme .navbar.scrolled {
   color: var(--primary-color);
 }
 
+.footer {
+  background-color: var(--background-dark-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+body.light-theme .footer {
+  background-color: var(--background-color);
+  color: var(--text-dark-color);
+}
+
+body.dark-theme .footer {
+  background-color: var(--background-dark-color);
+  color: var(--text-light-color);
+}
+
+
+
+/* :root {
+  --primary-color: #333;
+  --primary-hover-color: #333;
+  --secondary-color: #333;
+  --background-color: #ffffff;
+  --background-dark-color: #242424;
+  --font-size-large: 1.2em;
+  --font-size-medium: 1em;
+  --font-size-small: 0.9em;
+  --text-light-color: #ffffff;
+  --navbar-shadow-light: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+  --navbar-shadow-dark: 0 0.5px 2px rgba(237, 225, 225, 0.2);
+}
+
+body.light-theme {
+  --primary-color: #333;
+  --primary-hover-color: #333;
+  --secondary-color: #333;
+  --background-color: #ffffff;
+  --background-dark-color: #ffffff;
+  --text-light-color: #333;
+  --navbar-shadow-light: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+  --primary-color: #ffffff;
+  --primary-hover-color: #aaaaaa;
+  --secondary-color: #ffffff;
+  --background-color: #242424;
+  --background-dark-color: #242424;
+  --text-light-color: #ffffff;
+  --navbar-shadow-dark: 0 0.5px 3px rgba(237, 225, 225, 0.2);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-dark-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--navbar-shadow-light);
+}
+
+body.dark-theme .navbar .footer{
+  background-color: var(--background-dark-color);
+}
+
+body.dark-theme .navbar.scrolled  {
+  box-shadow: var(--navbar-shadow-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary-hover-color);
+  font-weight: 700;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 40%;
+    padding: 20px;
+    box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.nav-title-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+.nav-title-link:hover {
+  color: var(--primary-hover-color);
+  font-weight: 1000;
+}
+
+.theme-toggle-button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.footer {
+  background-color: var(--background-dark-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+ */
 
 /* :root {
   --primary-color: #333;
