@@ -85,6 +85,10 @@ h2 {
   color: var(--primary-color);
 }
 
+body.dark-theme .project-technologies h2{
+  color: #fff;
+}
+
 .technology-list {
   display: flex;
   gap: 2%;
@@ -106,6 +110,10 @@ h2 {
   color: #bec8d3;
   transform: rotate(10deg);
 }
+body.dark-theme .technology:hover {
+  color: #fff;
+  
+}
 
 .technology-label {
   margin-top: 0.3125rem;
@@ -115,11 +123,19 @@ h2 {
   width: 100%;
 }
 
+body.dark-theme .technology-label {
+  color: #fff;
+}
+
+
+
 .project-details-content ul,
 .project-repository ul {
   list-style-type: none;
   padding: 0;
 }
+
+
 
 .project-details-content li,
 .project-repository li {
@@ -232,6 +248,8 @@ h2 {
   transform: rotate(10deg);
 }
 
+
+
 .repository-label {
   margin-top: 0.3125rem;
   font-size: 1rem;
@@ -258,3 +276,6 @@ h2 {
 }
 
 
+body.dark-theme .repository-item{
+  color: #fff;
+}

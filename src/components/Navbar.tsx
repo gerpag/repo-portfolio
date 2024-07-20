@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { ThemeContext } from '../context/ThemeContext';
 import { useLanguage, Language } from '../context/LanguageContext'; 
-
 import '../css/Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -42,13 +41,14 @@ const Navbar: React.FC = () => {
         <a href="/#about-section" onClick={toggleMenu}>{translate('navbar.background')}</a>
         <a href="/#contact" onClick={toggleMenu}>{translate('navbar.contact')}</a>
       </div>
-      <button onClick={toggleTheme} className="theme-toggle-button">
-        {theme === 'dark' ? <FaSun /> : <FaMoon />}
-      </button>
-      <button onClick={() => changeLanguage(language === 'en' ? 'es' : 'en')} className="nav-link">
-       
-        {languageLabel}
-      </button>
+      <div className="nav-controls">
+        <button onClick={toggleTheme} className="theme-toggle-button">
+          {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        </button>
+        <button onClick={() => changeLanguage(language === 'en' ? 'es' : 'en')} className="nav-link">
+          {languageLabel}
+        </button>
+      </div>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
@@ -59,4 +59,5 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
 
