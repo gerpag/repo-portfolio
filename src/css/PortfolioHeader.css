@@ -52,14 +52,16 @@
 }
 
 .icon-link:hover {
-  color: var(--primary-hover-color);
+  color: #bec8d3;
+}
+body.dark-theme .icon-link:hover{
+  color: #fff;
 }
 
-
 [data-theme="dark"] .icon-link {
-  color: var(--primary-color); 
+  color: var(#9ea0a2); 
 }
 
 [data-theme="dark"]  .icon-link:hover {
-  color: var(--primary-hover-color);
+  color: var(--primary-color);
 }

@@ -22,7 +22,7 @@ interface Translations {
   
       // Projects
 
-      'projectsSection.title': 'Projects',
+      'projectsSection.title': 'My Projects',
       'projectsSection.readMore': "Read more",
 
       //moreProjects:
@@ -76,12 +76,12 @@ interface Translations {
      // Encabezado principal
       'header.mainTitle': "Hola, soy Germinal.",
       'header.profession': "Soy desarrollador web full stack.",
-      'header.interests': 'Me interesa la intersección entre la tecnología y la filosofía.',
+      'header.interests': 'Me interesa la intersección entre tecnología y filosofía.',
       'header.training': 'Me formé recientemente en desarrollo web full stack.',
       'header.goals': "Mi objetivo es seguir aprendiendo y conectando estos campos que me apasionan.",
         
       // Proyectos
-      'projectsSection.title': 'Proyectos',
+      'projectsSection.title': 'Mis Proyectos',
       'projectsSection.readMore': "Leer más",
 
 

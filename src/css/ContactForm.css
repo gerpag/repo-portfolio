@@ -38,6 +38,13 @@ button {
   cursor: pointer;
 }
 
+body.dark-theme input textarea {
+  background-color: #bec8d3;
+}
+body.dark-theme button{
+  border-color: #535252;
+}
+
 button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
@@ -50,6 +57,12 @@ button:disabled {
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+body.dark-theme #nets {
+  color: #cccccc;
+}
+body.dark-theme #nets:hover {
+  color: #ffff;
 }
 
 .footer-icon {

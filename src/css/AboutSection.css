@@ -16,6 +16,7 @@
   font-size: 3.125rem; 
   font-weight: 700;
   margin-bottom: 0.625rem; 
+  color: var(--text-light-color)
 }
 
 .about-section-content {
@@ -52,6 +53,11 @@
   font-size: 1.6rem; 
   font-weight: 200;
   text-align: center;
+  color: #ffffff;
+}
+
+body.dark-theme .subsection-title1 {
+  color: #cbc7c7; 
 }
 
 .skills-list {
@@ -79,12 +85,25 @@
 }
 
 
+body.dark-theme .skill {
+  color: #d6d0d0; 
+}
+body.dark-theme .skill:hover  {
+  color: #ffffff; 
+}
+
+
+
 .skill-label {
   margin-top: 0.3125rem; 
   font-size: 1rem;
   color: var(--primary-color);
   text-align: center; 
   width: 100%; 
+}
+
+body.dark-theme  .skill-label {
+  color: #ffffff; 
 }
 
 .certificates-list {
@@ -94,6 +113,10 @@
   font-size: 1.5rem;
   color: var(--primary-color);
 }
+body.dark-theme .certificates-list{
+  color: #ffffff; 
+}
+
 
 .downLoadCertficate {
 
@@ -146,6 +169,11 @@
   margin-top: 10%;
 }
 
+#cv a{
+  
+  text-decoration: none; 
+}
 #schools {
   text-align: center;
 }
+

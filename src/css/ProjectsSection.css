@@ -63,7 +63,7 @@
 .project-title {
   font-size: 1.7rem;
   font-weight: 600;
-  color: var(--primary-hover-color);
+  color: #ffffff;
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -81,7 +81,7 @@
 .button {
   display: inline-block;
   text-decoration: none;
-  color: var(--primary-color);
+  color: #ffffff;
   font-size: 1.6rem;
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
@@ -108,7 +108,7 @@
   color: var(--primary-color); 
 }
 
-[data-theme="dark"] .project-card:hover {
+body.dark-theme .project-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(237, 225, 225, 0.2);
 }
