@@ -4,6 +4,8 @@ import ModalImage from './ModalImage';
 import { techIcons } from '../data/techIcons';
 import { FaGithub } from 'react-icons/fa';
 import '../css/ProjectDetails.css';
+import { useLanguage } from '../context/LanguageContext';
+import "../i18n";
 
 interface GalleryImage {
   src: string;
@@ -37,6 +39,9 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+
+  const { translate } = useLanguage();
 
   const handleVideoClick = () => setShowVideoModal(true);
 
@@ -86,7 +91,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
       {technologies.length > 0 && (
         <section className="project-technologies">
-          <h2>Technologies</h2>
+          <h2>{translate("projectsDetails.technologies")}</h2>
           <div className="technology-list">
             {technologies.map((tech, index) => {
               const IconComponent = techIcons[tech];
@@ -102,7 +107,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       )}
 
       <section className="project-details-content">
-        <h2>Details</h2>
+        <h2>{translate("projectsDetails.detail")}</h2>
         <ul className="body-text">
           {details.map((detail, index) => (
             <li key={index}>{detail}</li>
@@ -112,7 +117,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
       {(repository.front || repository.back) && (
         <section className="project-repository">
-          <h2>Repository</h2>
+          <h2>{translate("projectsDetails.repository")}</h2>
           <ul className="body-text repository-list">
             {repository.front && (
               <li className="repository-item">
@@ -144,7 +149,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       )}
 
       <section className="project-gallery">
-        <h2>Gallery</h2>
+        <h2>{translate("projectsDetails.gallery")}</h2>
         <div className="gallery-carousel">
           <div className="gallery-carousel-container">
             {galleryImages.map((image, index) => (

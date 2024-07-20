@@ -20,13 +20,13 @@
   margin-right: 5px;
 }
 
-/* Dark mode variables */
+
 [data-theme="dark"] {
   --footer-background: #333;
   --footer-text: #fff;
 }
 
-/* Light mode variables */
+
 :root {
   --footer-background: #f8f9fa;
   --footer-text: #000;

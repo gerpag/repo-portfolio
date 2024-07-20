@@ -1,20 +1,26 @@
 import { useForm, ValidationError } from '@formspree/react';
-import "../css/ContactForm.css"
 import { FaGithub, FaLinkedin, FaEnvelope, FaDiscord } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
+import "../i18n";
+import "../css/ContactForm.css"
 
 
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xgeggaky");
-  
+  const { translate } = useLanguage();
+
   if (state.succeeded) {
-    return <p className='section-title'>Thanks for contacting me!</p>;
+    return <p className='section-title'>{translate('contact.form.success')}</p>;
   }
+  
+ 
+  
 
   return (
     <form onSubmit={handleSubmit}>
       <div id='contact'>
-        <span className="section-title">Contact me</span>
+        <span className="section-title">{translate('contact.title')}</span>
       </div>
 
       <div id="nets">
@@ -25,7 +31,7 @@ function ContactForm() {
       </div>
 
       <label htmlFor="name">
-        Name
+      {translate('contact.form.name')}
       </label>
       <input
         id="name"
@@ -39,7 +45,7 @@ function ContactForm() {
       />
 
       <label htmlFor="subject">
-        Subject
+      {translate('contact.form.subject')}
       </label>
       <input
         id="subject"
@@ -53,7 +59,7 @@ function ContactForm() {
       />
 
       <label htmlFor="email">
-        Email Address
+      {translate('contact.form.email')}
       </label>
       <input
         id="email"
@@ -66,7 +72,7 @@ function ContactForm() {
         errors={state.errors}
       />
 
-      <label htmlFor="message">Message</label>
+      <label htmlFor="message">{translate('contact.form.message')}</label>
       <textarea
         id="message"
         name="message"
@@ -78,7 +84,7 @@ function ContactForm() {
       />
       
       <button type="submit" disabled={state.submitting}>
-        Submit
+      {translate('contact.form.submit')}
       </button>
     </form>
   );
