@@ -1,7 +1,7 @@
 .project-details-page {
   padding: 20px;
-  background-color: var(--background-color); /* Se ajusta según el tema */
-  color: var(--text-light-color); /* Se ajusta según el tema */
+  background-color: var(--background-color); 
+  color: var(--text-light-color); 
 }
 
 .project-details-page[data-theme="dark"] {
@@ -11,8 +11,7 @@
 
 .project-details-wrapper {
   padding: 20px;
-  background: var(--background-light-color); /* Se ajusta según el tema */
-  border-radius: 8px;
+  background: var(--background-light-color); 
   box-shadow: var(--box-shadow);
 }
 
@@ -23,7 +22,7 @@
 .page-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--text-light-color); /* Se ajusta según el tema */
+  color: var(--text-light-color);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -32,7 +31,7 @@
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: var(--text-dark-color); /* Se ajusta según el tema */
+  color: var(--text-dark-color); 
 }
 
 .page-gallery {
@@ -68,13 +67,13 @@
   line-height: 1;
   margin-top: 0;
   margin-bottom: 20px;
-  color: var(--text-light-color); /* Se ajusta según el tema */
+  color: var(--text-light-color); 
 }
 
 .body-text {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: var(--text-dark-color); /* Se ajusta según el tema */
+  color: var(--text-dark-color); 
 }
 
 .project-header-image-container {
@@ -112,16 +111,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
-  color: var(--text-light-color); /* Se ajusta según el tema */
+  color: #fff; 
   padding: 10px 20px;
   border-radius: 4px;
-  opacity: 0;
+  opacity: 1;
   transition: transform 0.3s, opacity 0.3s;
   font-size: 1.5rem;
 }
 
 .project-header-image-container:hover .project-demo-text {
-  opacity: 1;
+  
   transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -129,7 +128,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: var(--text-light-color); /* Se ajusta según el tema */
+  color: var(--text-light-color); 
 }
 
 .project-details-content .body-text {
@@ -166,7 +165,7 @@
   font-size: 0.9rem;
   margin-top: 5px;
   text-align: center;
-  color: var(--text-dark-color); /* Se ajusta según el tema */
+  color: var(--text-dark-color); 
 }
 
 @media (max-width: 1024px) {
