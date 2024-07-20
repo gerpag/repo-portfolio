@@ -36,6 +36,13 @@ interface Translations {
       "projectsDetails.repository": "Repository",
       "projectsDetails.gallery": "Gallery",
 
+      //About Section:
+      'about.title': "My Background",
+      'about.skills': "Technical Skills",
+      'about.education': "Education",  
+      'about.sec.course': "Computer cybersecurity in the company", 
+      'about.devops.course': "DevOps with Docker, Jenkins, Kubernetes, Git, GitFlow and CI/CD",
+
 
 
     //Contact: 
@@ -86,7 +93,14 @@ interface Translations {
       "projectsDetails.detail": "Detalles", 
       "projectsDetails.repository": "Repositorio",
       "projectsDetails.gallery": "Galería",
-      
+
+      //Formación:
+
+      'about.title': "Experiencia",
+      'about.skills': "Habilidades técnicas",
+      'about.education': "Formación",  
+      'about.sec.course': "Gestión de la seguridad informática en la empresa", 
+      'about.devops.course': "DevOps con Docker, Jenkins, Kubernetes, Git, GitFlow y CI/CD",
 
       //Contacto:
       
