@@ -9,7 +9,7 @@ import "../i18n";
 const ProjectDetailsPage: React.FC = () => {
   const { title } = useParams<{ title: string }>();
   
-  const { language, translate } = useLanguage();
+  const { language } = useLanguage();
   const selectedProjects = projectsDetail[language];
   
   const project = selectedProjects.find(p => 

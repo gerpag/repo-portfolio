@@ -276,6 +276,6 @@ body.dark-theme .technology-label {
 }
 
 
-body.dark-theme .repository-item{
+body.dark-theme .repository-list li a:hover{
   color: #fff;
 }
