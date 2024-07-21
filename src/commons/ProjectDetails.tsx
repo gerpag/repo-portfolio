@@ -85,10 +85,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </div>
       </header>
 
-      <section className="project-description">
-        <p className="body-text">{description}</p>
-      </section>
-
       {technologies.length > 0 && (
         <section className="project-technologies">
           <h2>{translate("projectsDetails.technologies")}</h2>
@@ -105,15 +101,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           </div>
         </section>
       )}
-
-      <section className="project-details-content">
-        <h2>{translate("projectsDetails.detail")}</h2>
-        <ul className="body-text">
-          {details.map((detail, index) => (
-            <li key={index}>{detail}</li>
-          ))}
-        </ul>
-      </section>
 
       {(repository.front || repository.back) && (
         <section className="project-repository">
@@ -147,6 +134,23 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           </ul>
         </section>
       )}
+
+      <section className="project-description">
+        <p className="body-text">{description}</p>
+      </section>
+
+     
+
+      <section className="project-details-content">
+        <h2>{translate("projectsDetails.detail")}</h2>
+        <ul className="body-text">
+          {details.map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      </section>
+
+      
 
       <section className="project-gallery">
         <h2>{translate("projectsDetails.gallery")}</h2>
