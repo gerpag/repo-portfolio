@@ -34,6 +34,10 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
+  body.dark-theme #more-projects-section .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(237, 225, 225, 0.2);
+  }
   
   #more-projects-section .project-image {
     width: 100%;
