@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
-import { ThemeContext } from '../context/ThemeContext';
+import React, { useState, useEffect} from 'react';
+import { FaSun, FaMoon} from 'react-icons/fa';
+
+import {useTheme} from '../context/ThemeContext';
 import { useLanguage, Language } from '../context/LanguageContext'; 
 import '../css/Navbar.css';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, translate } = useLanguage();
 
   const toggleMenu = () => {
@@ -33,8 +34,14 @@ const Navbar: React.FC = () => {
 
   const languageLabel = language === 'en' ? 'Esp' : 'Eng';
 
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} data-theme={theme}>
+
+
+
+
+
       <a href="/" className="nav-title-link">{translate('navbar.portfolio')}</a>  
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="/#my-work-section" onClick={toggleMenu}>{translate('navbar.projects')}</a>

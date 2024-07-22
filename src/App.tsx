@@ -1,15 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import BackButton from './components/BackButton';
 import PortfolioHeader from './components/PortfolioHeader';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import ProjectDetailsPage from './components/ProjectDetailsPage';
 import MoreProjects from './components/MoreProjects';
-import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider} from "./context/LanguageContext"
+
 
 import './css/App.css';
 
@@ -20,6 +22,7 @@ const App: React.FC = () => (
         <Router>
           <div className="App">
             <Navbar />
+            <BackButton/>
             <main id="main-content">
               <Routes>
                 <Route path="/" element={
