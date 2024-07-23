@@ -44,7 +44,7 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
       description: 'Designed specifically for companies with large fleets of couriers, Fast Delivery provides a robust platform for assigning, monitoring, and optimizing package distribution in real time.',
       deploy: "",
       image: fastDeliveryImage,
-      demoVideo: "", 
+      demoVideo: "https://www.youtube.com/embed/AXpDK32Ww3s?si=A8-V5jlyXGDaasDf", 
       details: [
         'Real-Time Monitoring: Real-time visualization of all couriers’ locations, allowing constant tracking of routes and deliveries.',
         'Delivery Status: Real-time updates on each package’s status, including delivered, in transit, and pending.',
