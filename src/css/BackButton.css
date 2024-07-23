@@ -1,13 +1,25 @@
 .back-button-fixed {
-    position: fixed;
+  position: fixed;
+  top: 10%;
+  left: 2%;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .back-button-fixed {
     top: 10%;
     left: 2%;
-    background: none;
-    border: none;
-    
-    color: inherit;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1000; 
   }
-  
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .back-button-fixed {
+    top: 21%;
+    left: 2%;
+  }
+}
