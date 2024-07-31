@@ -33,7 +33,7 @@ const ProjectDetailsPage: React.FC = () => {
         image={project.image}
         demoVideo={project.demoVideo} 
         details={project.details}
-        galleryImages={project.galleryImages}
+        galleryImages={project.galleryImages || []}
         technologies={project.technologies}
         repository={project.repository}
       />

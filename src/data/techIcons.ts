@@ -1,12 +1,13 @@
-
-
 import {
   FaReact, FaCss3Alt, FaNodeJs, FaDocker, FaJenkins, FaGithub, FaGitAlt,
-  FaTrello, FaAws, FaFileAlt, FaJs, FaEnvelope
+  FaTrello, FaAws, FaFileAlt, FaJs, FaEnvelope, 
 } from 'react-icons/fa';
 import {
    SiExpress, SiJsonwebtokens, SiPostgresql, SiMongodb, SiTypescript, SiTailwindcss, SiSequelize, SiRedux
 } from 'react-icons/si';
+
+
+
 
 export const techIcons: { [key: string]: React.ElementType } = {
   JavaScript: FaJs,
@@ -28,5 +29,6 @@ export const techIcons: { [key: string]: React.ElementType } = {
   Markdown: FaFileAlt,  
   Sequelize: SiSequelize,
   Redux: SiRedux,
-  NodeMailer: FaEnvelope
+  NodeMailer: FaEnvelope,
+  
 };
