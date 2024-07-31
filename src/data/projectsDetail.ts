@@ -2,8 +2,8 @@ import fastDeliveryImage from '../assets/images/FastDelivery.jpg';
 import houseOfDevImage from '../assets/images/HouseOfDev.png';
 import polirubroImage from '../assets/images/polirubro.png';
 import polirubroVideo from '../assets/videos/polirubro.webm';
-import polirubroGal1 from "../assets/images/polirubro-gal/BOLSA-PLÁSTICO-ESTAMPADA IKEA-AZUL-NO-NO.jpg";
-import polirubroGal2 from "../assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTICO-RAYAS-BLANCO.NARANJA-NO-NO.jpg";
+
+
 import tmdbImage from "../assets/images/TMDB.jpeg";
 import portfolio from "../assets/images/Portfolio.png";
 import eCommerceStore from "../assets/images/e-commerce.jpg"
