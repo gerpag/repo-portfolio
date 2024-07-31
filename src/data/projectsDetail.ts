@@ -6,6 +6,7 @@ import polirubroGal1 from "../assets/images/polirubro-gal/BOLSA-PLÁSTICO-ESTAMP
 import polirubroGal2 from "../assets/images/polirubro-gal/BOLSO PLAYERO-PLÁSTICO-RAYAS-BLANCO.NARANJA-NO-NO.jpg";
 import tmdbImage from "../assets/images/TMDB.jpeg";
 import portfolio from "../assets/images/Portfolio.png";
+import eCommerceStore from "../assets/images/e-commerce.jpg"
 
 
 interface GalleryImage {
@@ -17,6 +18,7 @@ interface GalleryImage {
 interface Repository {
   front: string;
   back: string;
+  repo: string;
 }
 
 interface ProjectDetail {
@@ -27,7 +29,7 @@ interface ProjectDetail {
   image: string;
   demoVideo?: string;
   details: string[];
-  galleryImages: GalleryImage[];
+  galleryImages?: GalleryImage[];
   technologies: string[];
   repository: Repository;
   contribution?: string;
@@ -51,11 +53,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         "Package Management: Couriers select up to 10 packages per day. Dynamic reassignment capability by administrators based on route changes, new priorities, or unforeseen events."
       ],
       galleryImages: [
-        { src: '../assets/images/fast1.png', caption: 'App screenshot 1', isHalfWidth: true },
+        { src: '', caption: 'App screenshot 1', isHalfWidth: true },
         { src: '../assets/images/fast2.png', caption: 'App screenshot 2', isHalfWidth: false }
       ],
       technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
-      repository: { front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
+      repository: { repo:"",  front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
       contribution: ""
     },
     {
@@ -70,11 +72,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Administrator role enables catalog editing (all CRUD options)'
       ],
       galleryImages: [
-        { src: polirubroGal1, caption: 'Store layout 1', isHalfWidth: true },
-        { src: polirubroGal2, caption: 'Store layout 2', isHalfWidth: false }
+        { src: "", caption: 'Store layout 1', isHalfWidth: true },
+        { src: "", caption: 'Store layout 2', isHalfWidth: false }
       ],
       technologies: ['React', 'TailwindCSS', 'Express', 'JWT', 'MongoDB', 'Docker'],
-      repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
+      repository: {repo:"", front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
       contribution: ""
     },
     {
@@ -96,11 +98,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Email Notifications: Automated email sending to confirm appointments using Nodemailer.'
       ],
       galleryImages: [
-        { src: '../assets/images/house1.png', caption: 'Community event 1', isHalfWidth: true },
+        { src: '', caption: 'Community event 1', isHalfWidth: true },
         { src: '../assets/images/house2.png', caption: 'Community event 2', isHalfWidth: false }
       ],
-      technologies: ['React', 'Redux', 'TailwindCSS', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'NodeMailer'],
-      repository: { front: 'https://github.com/user/house-of-dev-frontend', back: 'https://github.com/user/house-of-dev-backend' },
+      technologies: ['React', 'Redux', 'MUI', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'NodeMailer'],
+      repository: { repo:"https://github.com/gerpag/Real-Estate-App", front: '', back: '' },
       contribution: ""
     },
     {
@@ -119,11 +121,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Favorites: Users can add and remove favorites and view their favorites on a profile screen.'
       ],
       galleryImages: [
-        { src: '../assets/images/tmdb1.png', caption: 'Search results', isHalfWidth: true },
+        { src: '', caption: 'Search results', isHalfWidth: true },
         { src: '../assets/images/tmdb2.png', caption: 'Movie details', isHalfWidth: false }
       ],
       technologies: ['React', 'Redux', 'Express', 'JWT', 'NodeJS'],
-      repository: { front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
+      repository: { repo:"", front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
       contribution: ""
     },
     {
@@ -140,13 +142,38 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Dockerization of the project for easy and consistent deployment across different environments.'
       ],
       galleryImages: [
-        { src: '../assets/images/portfolio1.png', caption: 'Portfolio screenshot 1', isHalfWidth: true },
+        { src: '', caption: 'Portfolio screenshot 1', isHalfWidth: true },
         { src: '../assets/images/portfolio2.png', caption: 'Portfolio screenshot 2', isHalfWidth: false }
       ],
       technologies: ['React', 'Vite', 'CSS', 'NodeJS', 'Express', 'MongoDB', 'Docker'],
-      repository: { front: 'https://github.com/user/portfolio-frontend', back: '' },
+      repository: { repo:"https://github.com/user/portfolio-frontend", front: '', back: '' },
+      contribution: ""
+    },
+    {
+      title: 'E-Commerce',
+      subTitle: "E-commerce platform for selling products online",
+      description: 'Development of an online store using React for the frontend, NodeJS and Express for the backend, and MongoDB for data management. Includes payment integration and an inventory management system.',
+      deploy: "",
+      image: eCommerceStore,
+      demoVideo: "",
+      details: [
+        'Frontend development with React for a modern and dynamic user interface.',
+        'Backend built with NodeJS and Express to handle transactions, user authentication, and product management.',
+        'MongoDB database for storing product, user, and order information.',
+        'Integration of payment gateways such as Stripe or PayPal for secure payment processing.',
+        'Inventory management system to update and control product stock.',
+        'Implementation of authentication and authorization for a secure user experience.'
+      ],
+      galleryImages: [
+        { src: '', caption: 'Screenshot of the homepage', isHalfWidth: false },
+        { src: '../assets/images/ecommerce2.png', caption: 'Screenshot of the shopping cart', isHalfWidth: true },
+        { src: '../assets/images/ecommerce3.png', caption: 'Screenshot of the product page', isHalfWidth: true }
+      ],
+      technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
+      repository: { repo: "https://github.com/gerpag/E-commerce", front: '', back: '' },
       contribution: ""
     }
+    
   ],
   es: [
     {
@@ -162,11 +189,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         "Gestión de Paquetes: Los repartidores seleccionan hasta 10 paquetes diarios. Capacidad de reasignación dinámica por parte de administradores en función de cambios en la ruta, nuevas prioridades, o imprevistos."
       ],
       galleryImages: [
-        { src: '../assets/images/fast1.png', caption: 'Captura de pantalla de la app 1', isHalfWidth: true },
+        { src: '', caption: 'Captura de pantalla de la app 1', isHalfWidth: true },
         { src: '../assets/images/fast2.png', caption: 'Captura de pantalla de la app 2', isHalfWidth: false }
       ],
       technologies: ['React', 'NodeJS', 'Express', 'MongoDB'],
-      repository: { front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
+      repository: {repo: "", front: 'https://github.com/user/fast-delivery-frontend', back: 'https://github.com/user/fast-delivery-backend' },
       contribution: ""
     },
     {
@@ -181,11 +208,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Rol de administrador habilita la opción de edición del catálogo (todas las opciones del CRUD)'
       ],
       galleryImages: [
-        { src: polirubroGal1, caption: 'Diseño de la tienda 1', isHalfWidth: true },
-        { src: polirubroGal2, caption: 'Diseño de la tienda 2', isHalfWidth: false }
+        { src: "", caption: 'Diseño de la tienda 1', isHalfWidth: true },
+        { src: "", caption: 'Diseño de la tienda 2', isHalfWidth: false }
       ],
       technologies: ['React', 'TailwindCSS', 'Express', 'JWT', 'MongoDB', 'Docker'],
-      repository: { front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
+      repository: { repo:"", front: 'https://github.com/user/polirubro-frontend', back: 'https://github.com/user/polirubro-backend' },
       contribution: ""
     },
     {
@@ -207,11 +234,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Notificaciones por correo: envío automatizado de correos electrónicos para confirmar las citas utilizando nodemailer.'
       ],
       galleryImages: [
-        { src: '../assets/images/house1.png', caption: 'Evento comunitario 1', isHalfWidth: true },
+        { src: '', caption: 'Evento comunitario 1', isHalfWidth: true },
         { src: '../assets/images/house2.png', caption: 'Evento comunitario 2', isHalfWidth: false }
       ],
       technologies: ['React', 'Redux', 'TailwindCSS', 'Express', 'Sequelize', 'PostgreSQL', 'JWT', 'NodeMailer'],
-      repository: { front: 'https://github.com/user/house-of-dev-frontend', back: 'https://github.com/user/house-of-dev-backend' },
+      repository: { repo:"https://github.com/gerpag/Real-Estate-App", front: '', back: ''},
       contribution: ""
     },
     {
@@ -230,11 +257,11 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Favoritos: los usuarios pueden agregar y sacar favoritos, y ver sus favoritos en una pantalla de perfil.'
       ],
       galleryImages: [
-        { src: '../assets/images/tmdb1.png', caption: 'Resultados de búsqueda', isHalfWidth: true },
+        { src: '', caption: 'Resultados de búsqueda', isHalfWidth: true },
         { src: '../assets/images/tmdb2.png', caption: 'Detalles de la película', isHalfWidth: false }
       ],
       technologies: ['React', 'Redux', 'Express', 'JWT', 'NodeJS'],
-      repository: { front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
+      repository: { repo:"", front: 'https://github.com/user/tmdba-frontend', back: 'https://github.com/user/tmdba-backend' },
       contribution: ""
     },
     {
@@ -251,11 +278,35 @@ const projectsDetail: Record<string, ProjectDetail[]> = {
         'Dockerización del proyecto para un despliegue sencillo y consistente en diferentes entornos.'
       ],
       galleryImages: [
-        { src: '../assets/images/portfolio1.png', caption: 'Captura de pantalla del portafolio 1', isHalfWidth: true },
+        { src: '', caption: 'Captura de pantalla del portafolio 1', isHalfWidth: true },
         { src: '../assets/images/portfolio2.png', caption: 'Captura de pantalla del portafolio 2', isHalfWidth: false }
       ],
       technologies: ['React', 'Vite', 'CSS', 'NodeJS', 'Express', 'MongoDB', 'Docker'],
-      repository: { front: 'https://github.com/user/portfolio-frontend', back: '' },
+      repository: { repo:"https://github.com/user/portfolio-frontend", front: '', back: '' },
+      contribution: ""
+    },
+    {
+      title: 'E-Commerce',
+      subTitle: "Plataforma de comercio electrónico para vender productos en línea",
+      description: 'Desarrollo de una tienda en línea utilizando React para el frontend, NodeJS y Express para el backend, y MongoDB para la gestión de datos. Se incluye integración de pagos y un sistema de gestión de inventario.',
+      deploy: "",
+      image: eCommerceStore,
+      demoVideo: "",
+      details: [
+        'Desarrollo frontend con React para una interfaz de usuario moderna y dinámica.',
+        'Backend construido con NodeJS y Express para manejar transacciones, autentificación de usuarios y gestión de productos.',
+        'Base de datos MongoDB para almacenar información de productos, usuarios y pedidos.',
+        'Integración de pasarelas de pago como Stripe o PayPal para procesamiento seguro de pagos.',
+        'Sistema de gestión de inventario para actualizar y controlar el stock de productos.',
+        'Implementación de autenticación y autorización para una experiencia de usuario segura.'
+      ],
+      galleryImages: [
+        { src: '', caption: 'Captura de pantalla de la página de inicio', isHalfWidth: false },
+        { src: '../assets/images/ecommerce2.png', caption: 'Captura de pantalla del carrito de compras', isHalfWidth: true },
+        { src: '../assets/images/ecommerce3.png', caption: 'Captura de pantalla de la página de producto', isHalfWidth: true }
+      ],
+      technologies: ['React', 'NodeJS', 'Express', 'PostgreSQL'],
+      repository: { repo: "https://github.com/gerpag/E-commerce", front: '', back: '' },
       contribution: ""
     }
   ]

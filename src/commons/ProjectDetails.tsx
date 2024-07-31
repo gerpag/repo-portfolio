@@ -22,7 +22,7 @@ interface ProjectDetailsProps {
   details: string[];
   galleryImages: GalleryImage[];
   technologies?: string[];
-  repository?: { front: string; back: string };
+  repository?: { front: string; back: string ; repo: string};
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
@@ -34,7 +34,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   details,
   galleryImages,
   technologies = [],
-  repository = { front: '', back: '' },
+  repository = { front: '', back: '', repo: "" },
 }) => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
@@ -102,10 +102,23 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </section>
       )}
 
-      {(repository.front || repository.back) && (
+      {(repository.front || repository.back || repository.repo) && (
         <section className="project-repository">
           <h2>{translate("projectsDetails.repository")}</h2>
           <ul className="body-text repository-list">
+          {repository.repo && (
+              <li className="repository-item">
+                <a
+                  href={repository.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                <FaGithub />
+                Repo
+                 
+                </a>
+              </li>
+            )}
             {repository.front && (
               <li className="repository-item">
                 <a
@@ -150,9 +163,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </ul>
       </section>
 
-      
-
-      <section className="project-gallery">
+      {galleryImages[0].src.length > 0  && (
+        <section className="project-gallery">
         <h2>{translate("projectsDetails.gallery")}</h2>
         <div className="gallery-carousel">
           <div className="gallery-carousel-container">
@@ -174,19 +186,25 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </div>
       </section>
 
-      <Modal
-        show={showVideoModal}
-        videoUrl={demoVideo}
-        onClose={handleCloseModal}
-      />
 
-      <ModalImage
-        show={showImageModal}
-        imageUrl={galleryImages[currentImageIndex].src}
-        onClose={handleCloseModal}
-        onNext={handleNextImage}
-        onPrev={handlePrevImage}
-      />
+      )
+
+      }
+        <Modal
+          show={showVideoModal}
+          videoUrl={demoVideo}
+          onClose={handleCloseModal}
+        />
+
+        <ModalImage
+          show={showImageModal}
+          imageUrl={galleryImages[currentImageIndex].src}
+          onClose={handleCloseModal}
+          onNext={handleNextImage}
+          onPrev={handlePrevImage}
+        />
+
+      
     </div>
   );
 };
